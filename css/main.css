@@ -18,7 +18,7 @@ body{
 	zoom : 80%;
 }
 
-	/* the side bar sizer */
+	/* the side-bar sizer */
 #sideBar{
 	position: relative;
 	height: 100%;
@@ -27,7 +27,7 @@ body{
 	border-radius: 15px;
 }
 
-/*  boxes sizer */
+/*  set the different boxes  */
 
 #container{
 	display: flex;
@@ -41,4 +41,6 @@ body{
 	height: 384px;
 	width: 384px;
 }
+
+
 

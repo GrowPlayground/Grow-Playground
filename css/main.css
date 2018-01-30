@@ -1,7 +1,11 @@
+	/* body image blured */
+
 body{
-	background: url('../images/fond.png');
+	background: url('../images/fond.png') fixed no-repeat;
 }
 
+
+	/*  delimited box for our templat */
 #Grow_playground{
 	width: 1024px;
 	height: 768px;
@@ -9,5 +13,30 @@ body{
 	margin: auto;	
 	box-shadow: 5px 5px 10px rgba(28,57,6);
 	border-radius: 15px;
-		
+	display: flex;
 }
+
+	/* the side bar sizer */
+#sideBar{
+	position: relative;
+	height: 100%;
+	width: 327px;
+	border: 1px groove rgba(44,103,70);
+	border-radius: 15px;
+}
+
+/*  boxes sizer */
+
+#container{
+	display: flex;
+	flex-wrap : wrap;
+}
+
+#skills,#habits,#ToDos,#Calendar{
+	position: relative;
+	border-radius: 15px;
+	border: 1px groove rgba(44,103,70);
+	height: 380px;
+	width: 384px;
+}
+

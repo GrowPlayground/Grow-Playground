@@ -5,7 +5,6 @@ body{
 	background-size: cover;
 }
 
-
 	/*  delimited box for our templat */
 #Grow_playground{
 	width: 1024px;
@@ -15,7 +14,7 @@ body{
 	box-shadow: 5px 5px 10px rgba(28,57,6);
 	border-radius: 15px;
 	display: flex;
-	zoom : 72%;
+	zoom : 89%;
 
 }
 
@@ -119,9 +118,9 @@ body{
 
 /*  general tasks*/
 
+
 #general-task{
 	position: relative;
-	margin-top: 15px;
 	height: 100px;
 	overflow: auto;
 }
@@ -147,6 +146,7 @@ body{
 
 #general-task li{
 	background-image: url('../images/fill.png');
+	margin: auto 7px;
 }
 
 #general-task li:hover {
@@ -155,7 +155,7 @@ body{
 
 /*  the different field */
 #Important_urgent{
-	margin-top: 60px;
+	margin-top: 74px;
 }
 
 
@@ -185,13 +185,19 @@ body{
 	display: none;		
 }
 
+/*  make the boxe of title small */
+#Important_urgent h1, #important h1, #urgent h1, #not_important-urgent h1{
+	margin-top: 4px;
+	margin-bottom: 6px;
+}
+
+
 /*  important & urgent */
 #title-IU{
 	border-bottom: 1px solid red;
 }
 
 #Important_urgent h1{
-	position: relative;
 	color: red;
 	font-size: 12px;
 }
@@ -243,7 +249,10 @@ body{
 	cursor: pointer;
 }
 
-
+/* space in the end to show the box */
+#not_important-urgent{
+	margin-bottom: 10px;
+}
 
 
 /*  to confirme  */ 
@@ -283,7 +292,7 @@ body{
 
 #general-task li{
 	display: block;
-	padding: 20px 0px 20px 0px;
+	padding: 10px 0px 10px 0px;
 	border: 1px solid white;
 	border-radius: 5px;
 	padding-left: 15px;
@@ -336,12 +345,12 @@ body{
 }
 
 /* save button */
-#general-task li .saveItem{
+li .saveItem{
 	display: none;
 	font-size: 10px;
 }
 /* cancel button */
-#general-task li .cancelItem{
+li .cancelItem{
 	display: none;
 	font-size: 10px;
 }
@@ -351,10 +360,11 @@ body{
 #not_important-urgent li,#Important_urgent li,#important li,#urgent li{
 	display: block;
 	background-image: url('../images/fill.png');
-	padding: 20px 0px 20px 0px;
+	padding: 10px 0px 10px 0px;
 	border: 1px solid black;
 	border-radius: 5px;
-	padding-left: 40px;
+	padding-left: 20px;
+	margin: 0 7px;
 	box-shadow: 2px 2px 0px black;
 }
 
@@ -422,8 +432,8 @@ body{
 .head{
 	display: flex;
 	justify-content:space-between;
-	margin-bottom: 10px;
 }
+
 
 /* title */
 
@@ -441,30 +451,50 @@ body{
 	margin-top: 2px;
 	border-radius: 10px;
 }
-.btn-success, {
-	font-size: 8px;
+
+
+.success{
+	position: relative;
+	font-size: 11px;
+	margin-right: 8px;
+	margin-top: 2px;
+	border-radius: 7px;
+	background: green;
+	color: white;
+	cursor: pointer;
+}
+.failled{
+	position: relative;
+	font-size: 11px;
+	margin-right: 8px;
+	margin-top: 2px;
+	border-radius: 7px;
+	background: red;
+	color: white;
+	left: 75px;
+	cursor: pointer;
 }
 
 /* color of the title and notes */
 .modal-title,.modal-textarea{
 	position: relative;
 	color: white;
-	padding-left: 15px;
-	font-size: 14px;
+	padding-left: 30px;
+	font-size: 12px;
 }
 
 /*  area field */
 .modal-title-field,.modal-note{
 	position: relative;
 	border-radius: 5px;
-	margin-left: 15px;
+	margin-left: 30px;
 	background: rgba(158,155,150,0.5);
 	border: none;
 	color: white;
 }
 
 .modal-title-field{
-	font-size: 13px;
+	font-size: 11px;
 }
 .modal-note{
 	font-size: 11px;
@@ -474,9 +504,9 @@ body{
 #checklist .title-checklist{
 	position: relative;
 	color: black;
-	padding-top: 30px;
-	margin-left: 15px;
-	font-size: 18px;
+	padding-top: 10px;
+	margin-left: 30px;
+	font-size: 12px;
 }
 
 /* button plus in checklist*/
@@ -498,15 +528,15 @@ body{
 /* no border in checklist*/
 #input-checklist{
 	border: none;
-	font-size: 12px;
+	font-size: 10px;
 }
 
 .difficulty{
 	position: relative;
 	color: black;
-	padding-top: 30px;
-	margin-left: 15px;
-	font-size: 18px;	
+	padding-top: 10px;
+	margin-left: 30px;
+	font-size: 12px;	
 }
 
 /* rating stars */
@@ -516,10 +546,10 @@ body{
 }
 
 .rating-difficulty span{
-	margin-top: 40px;
+	margin-top: 3px;
 	background: rgba(152,175,177,0.5);
-	width: 100px;
-	height: 100px;
+	width: 40px;
+	height: 30px;
 	text-align: center;
 }
 
@@ -576,11 +606,15 @@ body{
 
 
 .name-rating-difficulty{
-	margin-top: 10px;
+	margin-top: 2px;
 	display: flex;
 	justify-content:space-around;
 }
 
+.name-rating-difficulty p{
+	font-size: 10px;
+	text-align: center;
+}
 
 /* pop up ToDos List */
 #PopUp-ToDo-list{
@@ -762,9 +796,9 @@ body{
 	color: red;
 	text-decoration: none;
 	text-align: center;
-	top: 9%;
-	left: 32%;
 	cursor: pointer;
+	top: -3%;
+	font-size: 10px;
 }
 
 

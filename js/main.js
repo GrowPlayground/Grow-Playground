@@ -53,12 +53,13 @@ $(document).ready( function()
 	$('li').on('contextmenu',function(event){
 		event.preventDefault();
 	});
-	$('#general-task').on('contextmenu',function(event){
+	$('ul').on('contextmenu',function(event){
 		event.preventDefault();
 	});
 	
 	
-
+	// editing
+	$('.custom-menu').on('click','#edit-Menu',showModal);
 
 
 
@@ -120,7 +121,7 @@ $(document).ready( function()
 	}
 
 	function completeItem(event){
-		$(this).parent().toggleClass('done');  /* same for the previous one, just here we link it to a classe which can be modified in your css */
+		$(this).parent().toggleClass('done');  /* same for the previous one, just here we link it to a classe which can be modified in your css / toggle = click & unclick */
 	}
 
 
@@ -206,16 +207,7 @@ $(document).ready( function()
 
 	function HideMenu(event){
 		$('.custom-menu').hide();
-	}
-
-	
-	// removing
-	$('.custom-menu').on('click','#remove-Menu',function (event) {
-		console.log(event.delegateTarget);
-	});
-
-	// editing
-	$('.custom-menu').on('click','#edit-Menu',showModal);
+	}	
 
 
 	// Drop and drag event
@@ -228,7 +220,20 @@ $(document).ready( function()
 	}); 
 	$('ul').disableSelection();
 
-	// try to delete
+
+	 // tests  
+
+
+	// removing
+	$('.custom-menu').on('click','#remove-Menu',function (event) {
+		var searchParent=$(this).parent();
+		var sear = $(searchParent).parent();
+
+		sear.find('li').remove();
+	});
+
+
+	// try to delete in box ToDos
 	
 	$('#modal-ToDos').on('click','#edit-ToDos-delete',function(event){
 		console.log(event);

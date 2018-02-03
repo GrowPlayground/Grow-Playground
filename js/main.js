@@ -31,6 +31,12 @@ $(document).ready( function()
 	$('#ToDos').on('click','#accomplished-ref',showaccomplished);
 	$('#ToDos').on('click','.close',closeaccomplished);
 
+
+
+	//pop up modal PopUp Main Event 
+	$('body').on('click','.close',closeMainEvent);
+	
+
 	// showing the box of tasks 
 	
 	$('#ToDos').on('click','#title-IU',oth);
@@ -164,6 +170,17 @@ $(document).ready( function()
 		$('#PopUp-accomplished-list-main').fadeOut();
 	}	
 
+
+
+// close Main Event Pop Up 
+	
+	function closeMainEvent(event){
+		$('#Main-PopUp').fadeOut();
+		$('#Main-PopUp-main').fadeOut();
+	}	
+
+
+
 	//   hiding / showing the box tasks
 
 
@@ -229,7 +246,7 @@ $(document).ready( function()
 		var searchParent=$(this).parent();
 		var sear = $(searchParent).parent();
 
-		sear.find('li').remove();
+		sear.find('lif').remove();
 	});
 
 
@@ -238,6 +255,7 @@ $(document).ready( function()
 	$('#modal-ToDos').on('click','#edit-ToDos-delete',function(event){
 		console.log(event);
 	});
+
 
 });
 

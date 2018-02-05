@@ -3,6 +3,9 @@
 body{
 	background: url('../images/fond.png') fixed no-repeat;
 	background-size: cover;
+	height: 100%;
+	width: 100%;
+    margin: 0;
 }
 
 	/* audio box */
@@ -17,39 +20,44 @@ audio{
 
 	/*  delimited box for our templat */
 #Grow_playground{
-	width: 1024px;
-	height: 768px;
-	background: white;
-	margin: 10px auto;	
-	box-shadow: 5px 5px 10px rgba(28,57,6);
-	border-radius: 15px;
-	display: flex;
-	zoom : 89%;
+  box-sizing: border-box;
+  width: 1024px;
+  height: 768px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 5px 5px 10px rgba(28,57,6);
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  border: 1px solid black;
 }
 
 	/* the side-bar sizer */
 #sideBar{
-	position: relative;
-	height: 100%;
-	width: 339px;
-	border: 1px groove black;
-	border-radius: 15px;
+  width: 256px;
+  height: 766px;
+  float: left;
+  background-color: white;
 }
 
 /*  set the different boxes  */
 
 #container{
-	display: flex;
-	flex-wrap : wrap;
+  width: 766px;
+  height: 766px;
+  background-color: white;
+  box-sizing: border-box;
+  float: right;
 }
 
 #skills,#habits,#ToDos,#Calendar{
-	position: relative;
-	border-radius: 15px;
-	border: 1px groove black;
-	height: 384px;
-	width: 384px;
-	overflow: auto;
+  width: 50%;
+  height: 50%;
+  border: 1px solid gray;
+  float:left;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: inline-box;
 }
 
 #ToDos{

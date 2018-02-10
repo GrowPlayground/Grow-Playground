@@ -1,1 +1,12 @@
-/* coming : */
+
+
+	/* audio box */
+audio{
+	position: absolute;
+	z-index: 1;
+	border-radius: 25px;
+	width: 80px;
+	height: 25px;
+	top: 0;
+}
+

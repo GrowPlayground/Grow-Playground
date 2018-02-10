@@ -5,7 +5,7 @@
 		<!-- we set this for our page of the different boxes !! -->
 		<link rel="stylesheet" type="text/css" href="../css/main.css">
 		<!-- this is for the small icon in the onglet :) -->
-		<link rel="shortcut icon" type="image/X-icon" href="images/icon.png">
+		<link rel="shortcut icon" type="image/X-icon" href="../images/icon.png">
 		<!-- seting the option : Compatibilities-->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="initial-scale = 1.0, width=device-width">	
@@ -21,14 +21,6 @@
         <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
 
-	<!--  if you want to use vue.js  -->
-
-		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-		<!-- the same as : -->
-		<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
-
-
-
 
 	<!-- your javascript file : -->
 		<script type="text/javascript" src="../js/main.js"></script>
@@ -43,6 +35,7 @@
 
 
    		<title> Main Page</title>
+
 	</head>
 
 	<body>
@@ -58,6 +51,15 @@
 
 					<!-- Container of the different boxes-->
 					<div id="container">
+
+						<!-- Habits Box -->
+						<div id="habits">
+
+							<p> Pedro's part</p>
+
+						</div>
+						<!-- End Habits Box -->
+
 						
 						<!-- Skills Box  -->
 						<div id="skills">
@@ -67,20 +69,108 @@
 						</div>
 						<!-- End Skills Box -->
 
-						<!-- Habits Box -->
-						<div id="habits">
-
-
-
-						</div>
-						<!-- End Habits Box -->
-
-
 						<!--  ToDos Box  -->
 						<div id="ToDos">
 
+							<!-- header list -->
+							<div id="header-list">
+								<a id="To-Dos-ref" class="glyphicon glyphicon-chevron-left" title=" To Do's Box "> To_DoS </a>
+								<div id="title">
+									<p> <strong>All There Is To Do</strong> </p>
+								</div>
+								<a id="accomplished-ref" title="Accomplished Box ">Acomplished_Tasks <p class="glyphicon glyphicon-triangle-right"></p></a>
+							</div>
+
+							<!-- -general Task -->
+							<general-task-list id="task">
+								<div id="task-main">
+									<div id="input-task">
+										<input v-model="newtask" @keyUp.13="addTask" id="task_to-do" type="text" placeholder=" Add To Do " size="40" title=" what are you planing for ? ">
+									</div>
+								</div>
+								
+								<div id="general-task-main">
+									<div class="general-task-title"> All the way there is to do </div>
+									<div id="general-task">
+											<div class="general-task-list" v-for="task in tasks" v-text="task">
+
+											</div>
+									</div>
+								</div>										
+							</general-task-list>
+
+							<!-- - END general Task -->
+
+
+
+
+
+							<important_urgent-list id="Important_urgent"> 				<!--  block important and urgent -->
+								<div id="title-IU">
+									<h1> Important &amp Urgent (10%)</h1>
+								</div>
+								<div id="important_urgent-task">
+
+								</div>
+							</important_urgent-list>
+
+
+							<important-list id="important">					<!--  block important -->
+								<div id="title-I">
+									<h1> Important (90%)</h1>
+								</div>
+								<div id="important-task">
+
+								</div>
+
+							</important-list>
+
+
+							<urgent-list id="urgent">						<!-- block urgent -->
+								<div id="title-U">
+									<h1> Urgent </h1>
+								</div>
+								<div id="urgent-task">
+
+								</div>
+							</urgent-list>
+
+
+							<not_important_urgent-list id="not_important-urgent">			<!--  block not important and not urgent -->
+								<div id="title-NIU">
+									<h1> Not Important &amp Urgent </h1>
+								</div>
+								<div id="not_important-urgent-task">
+
+								</div>
+							</not_important_urgent-list>
+
+
+
+
+
+							<!--  if you want to use vue.js  -->
+
+							<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+							<!-- js files -->
+
+							<script type="text/javascript" src="../js/main.js"></script>
+
+
+
 						</div>
-						<!-- End ToDo's Box -->
+							<!-- End ToDo's Box -->
+
+
+							<div id="calendar">
+								<p> Mathieu's Part</p>
+
+							</div>
+
+
+
+
 
 	</body>
 </html>

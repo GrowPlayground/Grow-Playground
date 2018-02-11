@@ -8,15 +8,16 @@ body{
     margin: 0;
 }
 
-	/* audio box */
-audio{
-	position: absolute;
-	z-index: 1;
-	border-radius: 25px;
-	width: 80px;
-	height: 25px;
-	top: 0;
+ /* Font Define */
+@font-face{
+
+  font-family: 'SF';
+
+  src: url('../polices/Mon Cherry Personal Use.ttf');
+  src: url('../polices/Mon Cherry Personal Use.ttf') format('truetype');
 }
+
+
 
 	/*  delimited box for our templat */
 #Grow_playground{
@@ -57,7 +58,7 @@ audio{
   border: 1px solid gray;
   float:left;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: auto;
   display: inline-box;
 }
 
@@ -66,3 +67,286 @@ audio{
 	background-image: url('../images/cover-todolist.jpg');
 	background-size: cover;
 }
+
+
+/* header */ 
+#header-list{
+  display: flex;
+  justify-content:space-between;
+}
+
+#title{
+  position: relative;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-left: 50px;
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'SF';
+}
+
+/*  title accomplished */
+#accomplished-ref{
+  padding-top: 1px;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  color : white;
+  font-size: 11px;
+  margin-right: 5px;
+}
+
+
+
+/* title todos*/
+#To-Dos-ref{
+  padding-top: 1px;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  color : rgba(92,64,94); 
+  font-size: 11px;
+  margin-left: 5px;
+}
+
+
+
+
+#task{
+  margin-top: 5px;
+  height: 100px;
+  margin-bottom: 70px;
+
+
+}
+#task-main{
+  text-align: center;
+}
+
+#task_to-do{
+  background-color: rgba(238,238,238);
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+#task_to-do:focus{ 
+  background-color: white;
+  border: 1px outset rgba(188,188,188);
+}
+
+/*   -----------------   general tasks  ----------------------*/
+
+
+#general-task{
+  position: relative;
+  height: 100px;
+  overflow: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.general-task-title{
+  position: relative;
+  text-align: center;
+  color: #c00b90;
+  font-size: 13px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #c00b90;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  cursor: pointer;
+}
+
+
+.general-task-title:hover{
+  background: rgba(108,43,102,0.3);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+#general-task div{
+  background-image: url('../images/fill.png');
+  list-style: none;
+  margin: 5px 0;
+  box-shadow: 2px 2px 2px black;
+  cursor: pointer;
+}
+
+.general-task-list{
+  padding-left: 40px;
+  font-size: 20px;
+}
+
+
+
+
+/*  -------------  the different field   -------------------*/
+#Important_urgent{
+  margin-top: 74px;
+}
+
+
+/* ----------------field title -------------------*/
+#title-IU,#title-I,#title-U,#title-NIU,#title-A{  
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+}
+
+/* ---------------------cursor hover title ------------------------ */
+#title-IU,#title-I,#title-U,#title-NIU,#title-A:hover{
+  font-size: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*  ------------------block tasks-------------------------- */
+#important_urgent-task,#important-task,#urgent-task,#not_important-urgent-task,#accomplished-task{
+  position: relative;
+  margin-top: 5px;
+  height: 70px;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  display: none;    
+}
+
+/*  make the boxe of title small */
+#Important_urgent h1, #important h1, #urgent h1, #not_important-urgent h1{
+  margin-top: 4px;
+  margin-bottom: 6px;
+}
+
+
+/*  ------------------important & urgent ----------------------------- */
+#title-IU{
+  border-bottom: 1px solid red;
+}
+
+#Important_urgent h1{
+  color: red;
+  font-size: 12px;
+}
+
+#title-IU:hover{
+  background-color: rgba(255,4,4,0.3);
+  cursor: pointer;
+}
+
+
+
+
+/*  ------------------- important --------------------------*/
+#title-I{
+  border-bottom: 1px solid brown;
+}
+
+#important h1{
+  color: brown;
+  font-size: 12px;
+}
+
+#title-I:hover{
+  background-color: rgba(211,100,67,0.4);
+  cursor: pointer;
+}
+
+
+
+/* -----------------------urgent ------------------------- */
+#title-U{
+  border-bottom: 1px solid green;
+}
+#urgent h1{
+  color: green;
+  font-size: 12px;
+}
+
+#title-U:hover{
+  background-color: rgba(143,237,126,0.4);
+  cursor: pointer;
+}
+
+
+
+
+
+/*  -------------------------- not important & not urgent ---------------------------- */
+#title-NIU{
+  border-bottom: 1px solid #03327f;
+}
+#not_important-urgent h1{
+  color: #03327f;
+  font-size: 12px;
+}
+
+#title-NIU:hover{
+  background-color: rgba(69,222,239,0.4);
+  cursor: pointer;
+}
+
+/* space in the end to show the box */
+#not_important-urgent{
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/*  --------------------------  pop up ToDos List    ---------------------------- */
+
+#PopUp-ToDo-list{  
+  position: absolute;
+  width: 383px;
+  height: 383px;
+  border-radius: 15px;
+  top: 50%;
+  margin-left: 0px; 
+}
+#PopUp-ToDo-list-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#PopUp-ToDo-list-main{
+  position: relative;
+  width: 90%;
+  height: 94%;
+  top: 3%;
+  margin : auto; 
+  background : white;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px black;
+}
+
+.PopUp-ToDo-list-title{
+  color: red;
+  top: 10%;
+  text-align: center;
+  font-size: 25px;
+}
+
+.count{
+  display: block;
+  height: 40px;
+  width: 55px;
+  border : 1px solid black;
+  position: absolute;
+  bottom: 5px;
+  left: 42%;
+  border-radius: 10px;
+  
+}
+
+
+
+

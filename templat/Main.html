@@ -69,12 +69,13 @@
 						</div>
 						<!-- End Skills Box -->
 
+
 						<!--  ToDos Box  -->
 						<div id="ToDos">
 
 							<!-- header list -->
 							<div id="header-list">
-								<a id="To-Dos-ref" class="glyphicon glyphicon-chevron-left" title=" To Do's Box "> To_DoS </a>
+								<a id="To-Dos-ref" class="glyphicon glyphicon-chevron-left" title=" To Do's Box " @click="showModalToDo = true"> To_DoS </a>
 								<div id="title">
 									<p> <strong>All There Is To Do</strong> </p>
 								</div>
@@ -88,7 +89,7 @@
 										<input v-model="newtask" @keyUp.13="addTask" id="task_to-do" type="text" placeholder=" Add To Do " size="40" title=" what are you planing for ? ">
 									</div>
 								</div>
-								
+
 								<div id="general-task-main">
 									<div class="general-task-title"> All the way there is to do </div>
 									<div id="general-task">
@@ -96,7 +97,7 @@
 
 											</div>
 									</div>
-								</div>										
+								</div>
 							</general-task-list>
 
 							<!-- - END general Task -->
@@ -146,7 +147,11 @@
 							</not_important_urgent-list>
 
 
+							<!--  **********   Modal ToDo  *********** -->
 
+							<modal id="PopUp-ToDo-list">
+
+							</modal>
 
 
 							<!--  if you want to use vue.js  -->
@@ -157,8 +162,6 @@
 
 							<script type="text/javascript" src="../js/main.js"></script>
 
-
-
 						</div>
 							<!-- End ToDo's Box -->
 
@@ -167,9 +170,8 @@
 								<p> Mathieu's Part</p>
 
 							</div>
-
-
-
+				
+				</div>
 
 
 	</body>

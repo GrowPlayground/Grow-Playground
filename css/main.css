@@ -296,4 +296,57 @@ body{
 
 
 
-/*  --------------------------   ---------------------------- */
+/*  --------------------------  pop up ToDos List    ---------------------------- */
+
+#PopUp-ToDo-list{  
+  position: absolute;
+  width: 383px;
+  height: 383px;
+  border-radius: 15px;
+  top: 50%;
+  margin-left: 0px; 
+}
+#PopUp-ToDo-list-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#PopUp-ToDo-list-main{
+  position: relative;
+  width: 90%;
+  height: 94%;
+  top: 3%;
+  margin : auto; 
+  background : white;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px black;
+}
+
+.PopUp-ToDo-list-title{
+  color: red;
+  top: 10%;
+  text-align: center;
+  font-size: 25px;
+}
+
+.count{
+  display: block;
+  height: 40px;
+  width: 55px;
+  border : 1px solid black;
+  position: absolute;
+  bottom: 5px;
+  left: 42%;
+  border-radius: 10px;
+  
+}
+
+
+
+

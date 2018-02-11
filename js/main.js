@@ -9,7 +9,23 @@ Vue.component('general-task-list', {
 
 });
 
+Vue.component('modal', {
 
+	template:'<div> <slot></slot> </div>'
+
+});
+
+
+
+
+ // the different boxes : 
+
+
+Vue.component('important_urgent-list','important-list','urgent-list','not_important_urgent-list', {
+
+	template:'<div> <slot></slot> </div>'
+
+});
 
 
 new Vue ({
@@ -27,17 +43,6 @@ new Vue ({
 			this.newtask='';		
 		}
 	},
-});
-
-
-
- // the different boxes : 
-
-
-Vue.component('important_urgent-list','important-list','urgent-list','not_important_urgent-list', {
-
-	template:'<div> <slot></slot> </div>'
-
 });
 
 

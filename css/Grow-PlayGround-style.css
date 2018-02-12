@@ -10,3 +10,56 @@ audio{
 	top: 0;
 }
 
+
+
+/*   POP UP ENTRY PAGE  */
+
+#Main-PopUp{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0;
+}
+
+#Main-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#Main-PopUp-main{
+  position: relative;
+  width: 75%;
+  height: 70%;
+  top: 15%;
+  margin : auto; 
+  background: url('../images/fond-event.jpg'); 
+  background-size: 100% 100%;
+  border-radius: 35px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(18,70,15,0.6);
+}
+.Main-PopUp-img{
+  position: relative;
+  float: right;
+  top: 10%;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+}
+.Main-PopUp-joinUs{
+  position: relative;
+  transform : translate(360%, 250%);
+  width: 20%;
+  height: 20%;
+  cursor: pointer;
+}
+
+
+
+

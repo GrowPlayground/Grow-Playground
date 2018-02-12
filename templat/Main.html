@@ -18,13 +18,19 @@
 
 	<!--  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
 
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
 
 
+	<!--  if you want to use vue.js  -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
 	<!-- your javascript file : -->
 		<script type="text/javascript" src="../js/main.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		<script type="text/javascript" src="../js/avatar.js"></script>
+
+
 
 
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -75,7 +81,7 @@
 
 							<!-- header list -->
 							<div id="header-list">
-								<a id="To-Dos-ref" class="glyphicon glyphicon-chevron-left" title=" To Do's Box " @click="showModalToDo = true"> To_DoS </a>
+								<a id="To-Dos-ref" class="glyphicon glyphicon-chevron-left" title=" To Do's Box "> To_DoS </a>
 								<div id="title">
 									<p> <strong>All There Is To Do</strong> </p>
 								</div>
@@ -83,7 +89,7 @@
 							</div>
 
 							<!-- -general Task -->
-							<general-task-list id="task">
+							<div id="task">
 								<div id="task-main">
 									<div id="input-task">
 										<input v-model="newtask" @keyUp.13="addTask" id="task_to-do" type="text" placeholder=" Add To Do " size="40" title=" what are you planing for ? ">
@@ -93,30 +99,28 @@
 								<div id="general-task-main">
 									<div class="general-task-title"> All the way there is to do </div>
 									<div id="general-task">
-											<div class="general-task-list" v-for="task in tasks" v-text="task">
+											<div class="general-task-list">
 
 											</div>
 									</div>
 								</div>
-							</general-task-list>
+							</div>
 
 							<!-- - END general Task -->
 
 
 
 
-
-							<important_urgent-list id="Important_urgent"> 				<!--  block important and urgent -->
+							<div id="Important_urgent"> 				<!--  block important and urgent -->
 								<div id="title-IU">
 									<h1> Important &amp Urgent (10%)</h1>
 								</div>
 								<div id="important_urgent-task">
 
 								</div>
-							</important_urgent-list>
+							</div>
 
-
-							<important-list id="important">					<!--  block important -->
+							<div id="important">					<!--  block important -->
 								<div id="title-I">
 									<h1> Important (90%)</h1>
 								</div>
@@ -124,54 +128,148 @@
 
 								</div>
 
-							</important-list>
+							</div>
 
-
-							<urgent-list id="urgent">						<!-- block urgent -->
+							<div id="urgent">						<!-- block urgent -->
 								<div id="title-U">
 									<h1> Urgent </h1>
 								</div>
 								<div id="urgent-task">
 
 								</div>
-							</urgent-list>
+							</div>
 
-
-							<not_important_urgent-list id="not_important-urgent">			<!--  block not important and not urgent -->
+							<div id="not_important-urgent">			<!--  block not important and not urgent -->
 								<div id="title-NIU">
 									<h1> Not Important &amp Urgent </h1>
 								</div>
 								<div id="not_important-urgent-task">
 
 								</div>
-							</not_important_urgent-list>
+							</div>
+
+							<!--
+							<div id="accomplished">
+								<div id="title-A">
+									<h1> Accomplished </h1>
+								</div>
+								<div id="accomplished-task">
+
+								</div>
+							</div>
+						-->
 
 
-							<!--  **********   Modal ToDo  *********** -->
+						<!--  POP Up Modal Edit To-Dos -->
 
-							<modal id="PopUp-ToDo-list">
+							<div id="modal-ToDos">
+								<div class="modal_ToDos-bg close"></div>
+								<div class="modal_ToDos-List">
 
-							</modal>
+									<!-- <img src="images/closeIcon.png" class="closeIcon close"/> -->
+									<div id="modal-first_part">
+										<div class="head">
+												<h1 class="modal-t"><strong >Edit To-Do </strong></h1>
+											<div class=".btn-cancel-save">
+												<button class="failled">Cancel</button>
+												<button class="success">save</button>
+											</div>	
+										</div>
+										<form id="modal-container" method="post">
+											<label class="modal-title" for="title"><strong>Title*</strong></label> <br/>
+											<input class="modal-title-field" type="text" name="title" placeholder="what do you want to do ?" size="35"><br/>
+											<label class="modal-textarea" for="note"> <strong>notes</strong></label> <br/>
+											<textarea class="modal-note" name="note" rows="5" cols="40" placeholder="notification"></textarea>
+										</form>
+									</div>
+
+									<div id="modal-second-part">
+										<div id="checklist">
+											<h2 class="title-checklist"><strong>Checklist</strong></h2>
+											<form id="checklist-fomulaire" method="post">
+												<button class="glyphicon glyphicon-plus plus"></button>
+												<input id="input-checklist" type="text" placeholder="New Check List" size="40">
+											</form>
+										</div>
+										<div id="Difficlty">
+											<h2 class="difficulty"><strong>Difficulty</strong></h2>
+										</div>
+										<div class="rating-difficulty">
+											<span class="glyphicon glyphicon-star star0"></span>
+											<span class="glyphicon glyphicon-star star1" ><span class="glyphicon glyphicon-star star2"></span><br/></span>
+											<span class="glyphicon glyphicon-star star3"><span class="glyphicon glyphicon-star star4"></span><span class="glyphicon glyphicon-star star5"></span></span>
+										</div>
+										<div class="name-rating-difficulty">
+											<p>Normal <img src="../images/normal.png"></p>
+											<p>Difficult <img src="../images/difficult.png"></p>
+											<p>Crazy <img src="../images/crazy.png"></p>
+										</div>
+									</div>
+
+										<footer id="edit-ToDos-delete" class="glyphicon glyphicon-trash"> Delete This Task	</footer>
+								</div>
+							</div>
 
 
-							<!--  if you want to use vue.js  -->
 
-							<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+							<!--  POP Up Modal ToDos -->
+							<div id="PopUp-ToDo-list">
+								<div id="PopUp-ToDo-list-bg" class="close"></div>
+									<div id="PopUp-ToDo-list-main">
 
-							<!-- js files -->
+										<img src="../images/closeIcon.png" class="closeIcon close"/>
+										<h1 class="PopUp-ToDo-list-title"> To-Do List </h1>
 
-							<script type="text/javascript" src="../js/main.js"></script>
+										<ul id="PopUp-ToDo-task">
+
+										</ul>
+										<div>
+											<span class="count"></span>
+										</div>
+									</div>
+							</div>
+
+
+
+
+							<!--  POP Up Modal Accomplished list -->
+							<div id="PopUp-accomplished-list">
+									<div id="PopUp-accomplished-list-bg" class="close"></div>
+										<div id="PopUp-accomplished-list-main">
+
+											<img src="../images/closeIcon.png" class="closeIcon close"/>
+											<h1 class="PopUp-accomplished-list-title"> Accomplished List </h1>
+											<ul id="PopUp-accomplished-task">
+
+											</ul>
+											<div>
+												<span class="count"></span>
+											</div>
+										</div>
+							</div>
+
 
 						</div>
-							<!-- End ToDo's Box -->
+						<!-- End ToDos Box -->
+
+						<!-- Calendar Box  -->
+						<div id="Calendar">
 
 
-							<div id="calendar">
-								<p> Mathieu's Part</p>
 
-							</div>
-				
-				</div>
+						</div>
+						<!-- End Calendar Box -->
+					</div>
+					<!-- End of Container -->
+
+		</div>
+
+		<!-- the Custom Menu on left click -->
+		<ol class="custom-menu">
+				<li id="edit-Menu" class="glyphicon glyphicon-pencil"> Edit </li>
+				<li id="remove-Menu" class="glyphicon glyphicon-trash"> Remove </li>
+		</ol>
+		<!-- End of Custom Menu -->
 
 
 	</body>

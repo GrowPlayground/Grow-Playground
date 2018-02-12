@@ -169,6 +169,7 @@ body{
   background-image: url('../images/fill.png');
   list-style: none;
   margin: 5px 0;
+  padding-left: 40px;
   box-shadow: 2px 2px 2px black;
   cursor: pointer;
 }
@@ -180,8 +181,40 @@ body{
 
 
 
+/* calendar */
+#general-task div .calendarItem{
+  position: relative;
+  transform: translate(200%,130%);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Quick Editing */
+.editText{
+  display: none;
+}
+
+/* save button */
+div .saveItem{
+  display: none;
+  font-size: 10px;
+}
+/* cancel button */
+div .cancelItem{
+  display: none;
+  font-size: 10px;
+}
+
+/*  classe of the task created */
+.ListItem{
+  padding-left: 20px;
+}
+
+
 
 /*  -------------  the different field   -------------------*/
+
+
 #Important_urgent{
   margin-top: 74px;
 }
@@ -202,7 +235,7 @@ body{
 }
 
 /*  ------------------block tasks-------------------------- */
-#important_urgent-task,#important-task,#urgent-task,#not_important-urgent-task,#accomplished-task{
+#important_urgent-task,#important-task,#urgent-task,#not_important-urgent-task{
   position: relative;
   margin-top: 5px;
   height: 70px;
@@ -217,6 +250,18 @@ body{
 #Important_urgent h1, #important h1, #urgent h1, #not_important-urgent h1{
   margin-top: 4px;
   margin-bottom: 6px;
+}
+
+
+#important_urgent-task div,#important-task div,#urgent-task div,#not_important-urgent-task div{
+  display: block;
+  background-image: url('../images/fill.png');
+  padding: 10px 0px 10px 0px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin: 0 7px;
+  box-shadow: 2px 2px 0px black;
 }
 
 
@@ -347,6 +392,343 @@ body{
   
 }
 
+
+
+/**********************   pop up accomplushed List   ****************************/
+
+#PopUp-accomplished-list{
+  position: absolute;
+  width: 383px;
+  height: 383px;
+  border-radius: 15px;
+  top: 50%;
+  margin-left: 0px; 
+  display: none;
+}
+#PopUp-accomplished-list-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#PopUp-accomplished-list-main{
+  position: relative;
+  width: 90%;
+  height: 94%;
+  top: 3%;
+  margin : auto; 
+  background : white;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 1; 
+  display: none;
+  box-shadow: 5px 5px 5px black;
+}
+
+.PopUp-accomplished-list-title{
+  color: red;
+  top: 10%;
+  text-align: center;
+  font-size: 25px;
+}
+
+
+/* ******************************  pop up Modal Edit Box : ( probleme with the different stars rating ) *************************  */
+
+/*  modal box */
+#modal-ToDos{
+  position: absolute;
+  width: 766px;
+  height: 766px;
+  border-radius: 15px;
+  top: 0;
+  left: 25%;
+  margin-left: 0px;
+  z-index: 2;
+  display: none;
+}
+
+/*  modal bg after click*/
+.modal_ToDos-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+/* modal when it clicked */
+.modal_ToDos-List{
+  position: relative;
+  width: 50%;
+  height: 94%;
+  top: 3%;
+  margin : auto; 
+  background : white;
+  border: 1px solid black;
+  border-radius: 15px;
+  z-index: 1;
+  box-shadow: 5px 5px 5px '#26cb1a';
+}
+
+
+/*  close icon */
+.CloseIcon, .closeIcon{
+  position: absolute;
+  right: 3%;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+
+/* our modal */
+
+/*  modal fisrt part the orange one */
+#modal-first_part{
+  background: rgba(255,141,28,0.9);
+  border: 1px solid orange;
+  border-top-right-radius: 15px; 
+  border-top-left-radius: 15px; 
+  height: 50%;
+  width: 100%;
+}
+
+/*  title and button*/
+.head{
+  display: flex;
+  justify-content:space-between;
+}
+
+
+/* title */
+
+.modal-t{
+  position: relative;
+  color: white;
+  padding-left: 15px;
+  font-size: 18px;
+  padding-top: 6px;
+}
+ /*  button */
+.btn-cancel-save{
+  float: right;
+  margin-right: 8px;
+  margin-top: 2px;
+  border-radius: 10px;
+}
+
+
+.success{
+  position: relative;
+  font-size: 13px;
+  margin-right: 8px;
+  margin-top: 2px;
+  border-radius: 7px;
+  background: green;
+  color: white;
+  cursor: pointer;
+}
+.failled{
+  position: relative;
+  font-size: 13px;
+  margin-right: 8px;
+  margin-top: 2px;
+  border-radius: 7px;
+  background: red;
+  color: white;
+  left: 10px;
+  cursor: pointer;
+}
+
+#modal-container{
+  margin-top: 10%;
+}
+
+
+/* color of the title and notes */
+.modal-title,.modal-textarea{
+  position: relative;
+  color: white;
+  padding-left: 30px;
+  font-size: 18px;
+}
+
+/*  area field */
+.modal-title-field,.modal-note{
+  position: relative;
+  border-radius: 5px;
+  margin: 10px 30px;
+  background: rgba(158,155,150,0.5);
+  border: none;
+  color: white;
+  font-size: 15px;
+}
+
+
+/* checklist in modal */
+#checklist .title-checklist{
+  position: relative;
+  color: black;
+  padding-top: 15px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+
+/* button plus in checklist*/
+.glyphicon .plus{
+  position: relative;
+  top: 8px;
+}
+.plus{
+  color: green;
+  font-size: 15px;
+}
+/* the border checklist */
+#checklist-fomulaire{
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey; 
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* no border in checklist*/
+#input-checklist{
+  border: none;
+  font-size: 15px;
+}
+
+.difficulty{
+  position: relative;
+  color: black;
+  padding-top: 30px;
+  margin-left: 30px;
+  font-size: 18px;  
+}
+
+/* rating stars */
+.rating-difficulty{
+  display: flex;
+  justify-content:space-around;
+}
+
+.rating-difficulty span{
+  margin-top: 20px;
+  background: rgba(152,175,177,0.5);
+  width: 40px;
+  height: 30px;
+  text-align: center;
+}
+
+/* first span */
+.star0{
+  padding-top: 40px;
+  font-size: 20px;
+}
+
+.star0:hover{
+  color:rgba(255,128,0);
+}
+
+/* second span */
+.star1{
+  padding-top: 40px;
+  padding-right: 30px;
+  font-size: 20px;
+} 
+
+.star2{
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 20px;
+  transform: translate(0%,-100%);
+}
+
+.star1:hover{
+  color:rgba(255,128,0);  
+}
+/* third span */
+.star3{
+  padding-top: 40px;
+  padding-right: 30px;
+  font-size: 20px;
+
+}
+.star4{
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 20px;
+  transform: translate(0%,-100%); 
+}
+
+.star5{
+  padding-top: 60px;
+  font-size: 20px;
+  transform: translate(0%,-240%);
+}
+
+.star3:hover{
+  color:rgba(255,128,0);
+}
+
+
+.name-rating-difficulty{
+  margin-top: 10%;
+  display: flex;
+  justify-content:space-around;
+}
+
+.name-rating-difficulty p{
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+
+/*  edit toDos Delete */
+
+#edit-ToDos-delete{
+  position: relative;
+  color: red;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  top: 10%;
+  font-size: 14px;
+}
+
+
+
+
+/* ****************************** costume Menu Edit/Remove *************************  */
+
+
+
+/*   costume menu */ 
+.custom-menu{
+  position: absolute;
+  background: rgba('162,168,186,0.5');
+  border : 1px solid black;
+  z-index: 10000;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.custom-menu li{
+  list-style: none;
+  color: black;
+  font-size: 11px;
+  cursor: pointer;
+  padding : 2px 12px;
+  transition: all .3s ease;
+}
+
+#remove-Menu{
+  color: red;
+}
 
 
 

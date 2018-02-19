@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-EN">
+	<head>
+			<meta charset="UTF-8" >
+			<link rel="stylesheet" type="text/css" href="../css/Grow-PlayGround-style.css" media="screen" charset="UTF-8">
+			<link rel="shortcut icon" type="image/X-icon" href="images/icon.png">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<meta name="viewport" content="initial-scale = 1.0, width=device-width">
+
+		    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+
+		    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		    <!--[if lt IE 9]>
+		      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		    <![endif]-->
+		    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+			 <!--  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
+
+	        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
+			<script type="text/javascript" src="../js/main.js"></script>
+	 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		    <!-- Include all compiled plugins (below), or include individual files as needed -->
+		    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+		    <!-- Bootstrap -->
+		    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+		<title> Grow Register </title>
+	</head>
+
+	<body class="register-templat">
+		<div id="register-block">
+			<img class="register-signup" src="../images/Sign Up.png">
+
+			<form id="register-form" method="post" >
+								
+		        <label class="form_col" for="country">sexe :</label>
+
+		        <select name="country" id="country">
+		        	<option value="none">Sélectionnez votre Sexe </option>
+		        	<option value="H">Homme</option>
+		        	<option value="F">Femme</option>
+		        	<option value="Geek">Geek</option>
+		        	<option value="Geekette">Geekette</option>
+		        	<option value="Other">Other</option>
+		    	</select>		       
+		        <span class="tooltip">Vous devez sélectionnez votre sexe</span>
+		        <br /><br />
+
+		        <label class="form_col" for="lastName">Nom :</label>
+		        <input name="lastName" id="lastName" type="text" />
+		        <span class="tooltip">Un nom ne peut pas faire moins de 2 caractères</span>
+		        <br /><br />
+
+		        <label class="form_col" for="firstName">Prénom :</label>
+		        <input name="firstName" id="firstName" type="text" />
+
+		        <span class="tooltip">Un prénom ne peut pas faire moins de 2 caractères</span>
+		        <br /><br />
+
+		        <label class="form_col" for="age">Âge :</label>
+		        <input name="age" id="age" type="text" />
+		        <span class="tooltip">L'âge doit être compris entre 5 et 140</span>
+		        <br /><br />
+
+		        <label class="form_col" for="login">Pseudo :</label>
+		        <input name="login" id="login" type="text" />
+		        <span class="tooltip">Le pseudo ne peut pas faire moins de 4 caractères</span>
+		        <br /><br />
+
+		        <label class="form_col" for="pwd1">Mot de passe :</label>
+		        <input name="pwd1" id="pwd1" type="password" />
+		        <span class="tooltip">Le mot de passe ne doit pas faire moins de 6 caractères</span>
+		        <br /><br />
+
+		        <label class="form_col" for="pwd2">Mot de passe (confirmation) :</label>
+		        <input name="pwd2" id="pwd2" type="password" />
+		        <span class="tooltip">Le mot de passe de confirmation doit être identique à celui d'origine</span>
+		        <br /><br />
+
+		        <span class="form_col"></span>
+		        <label><input name="news" type="checkbox" /> Je désire recevoir la newsletter chaque mois.</label>
+		        <br /><br />
+
+		        <span class="form_col"></span>
+		        <input type="submit" value="M'inscrire" /> <input type="reset" value="Réinitialiser le formulaire" />
+
+			</form>
+
+
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

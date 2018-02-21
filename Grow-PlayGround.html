@@ -3,7 +3,6 @@
 		using : Html / Css / Javascript ( Javascript / jQuery or Vue.js if you can )  => for the front End 
 		using : Python / MongoDB / php if you need it  => for the Back End 
 
-
  -->
 
 
@@ -13,6 +12,8 @@
 		<meta charset="UTF-8" >	
 		<!-- we set this for our first page : the main page : not the page where we have our boxes !! -->
 		<link rel="stylesheet" type="text/css" href="css/Grow-PlayGround-style.css">  
+		<!-- Main CSS file (should be transferred into Vue elements) -->
+		<link rel="stylesheet" type="text/css" href="css/main.css"> 
 		<!-- this is for the small icon in the onglet :) -->
 		<link rel="shortcut icon" type="image/X-icon" href="images/icon.png">
 		<!-- seting the option : Compatibilities-->
@@ -37,44 +38,99 @@
 		<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
 
 
-
-
-	<!-- your javascript file : -->
-		<script type="text/javascript" src="js/main.js"></script>
-
-
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 
+	<!-- Temporary CSS sheets -->
+		<link rel="stylesheet" href="css/sideBar.css">
+		<link rel="stylesheet" href="css/console.css">
 
+
+
+
+    <!-- Noteworthy: CSS kebab-case   Javascript camelCase -->
 
    		<title>Grow Project</title>
   	</head>
 
    	<body>
 
-				<!-- Audio Play  -->			
-	   <audio src="multimedia/audio/audio-test.mp3" preload controls loop ></audio>	
+	<div class="growPlayground">
 
-	    			<!-- End Audio -->
 
-							<!-- Pop Up main page -->
+				
+	  <!-- SIDEBAR -->
 
-							<div id="Main-PopUp">
-									<div id="Main-PopUp-bg" class="close"></div>
-										<div id="Main-PopUp-main">
+  <div class="sideBar">
+    <div class="avatarContainerPosition">
+      <div class="avatarContainer">
+        <div class="healthContainer">
+        </div>
+        <div class="avatarImageContainer">
+        </div>
+      </div>
+    </div>
+    <div class="experienceContainer">
+      <div class="levelContainer">
+        <span class="level"></span>
+      </div>
+      <div class="experienceBar experienceBarOne">
+        <span class="experienceSpanOne"></span>
+      </div>
+    </div>
 
-											<img src="images/closeIcon.png" class="closeIcon close"/>
-											<img src="images/Main-PopUp.png" class="Main-PopUp-img" >
-											<a href="templat/register.html"><img src="images/joinUs.png" class="Main-PopUp-joinUs"></a> 
-											<a href="templat/connect.html"><img src="images/connect.png" class="Main-PopUp-connect"></a>
-										</div>
-							</div>
-		
-		<!-- End Pop Main Page  -->
+    <div class="vaultContainer">
+      <div class="goldContainer">
+      </div>
+      <div class="marketContainer">
+        <div class="buyApproval">
+          <span class="buyButtonYes"> Yes </span> 
+          <span class="buyButtonNo"> No </span>
+        </div>
+        <div class="marketImageContainer">
+        </div>
+      </div>
+    </div>
 
+
+
+  </div>
+  <!-- END OF SIDEBAR -->
+
+	  <!-- END OF SIDEBAR -->
+
+      <!-- CONSOLE -->
+
+      <div class="consoleContainer">
+
+		<tabs>
+			<tab name="Health and Experience" :selected="true">
+			<console-button>{{health}}</console-button>
+			</tab>
+			<tab name="Other"> 	
+				
+			</tab>
+			<tab name="Things">
+				
+			</tab>
+
+		</tabs>
+      </div>
+
+      <!-- END OF CONSOLE -->
+
+
+	</div>
+
+
+
+
+	<!-- your javascript file : -->
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/sideBar.js"></script>
+		<script type="text/javascript" src="js/console.js"></script>
 
 	</body>
 </html>

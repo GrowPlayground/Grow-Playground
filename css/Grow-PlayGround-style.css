@@ -1,21 +1,16 @@
-body{
-
-  background: url('../images/fond.gif') fixed ;
-  background-size: 100% 100%;
-  
-}
 
 
-
-  /* audio box */
+	/* audio box */
 audio{
-  position: absolute;
-  z-index: 1;
-  border-radius: 25px;
-  width: 80px;
-  height: 25px;
-  top: 0;
+	position: absolute;
+	z-index: 1;
+	border-radius: 25px;
+	width: 80px;
+	height: 25px;
+	top: 0;
 }
+
+
 
 /*   POP UP ENTRY PAGE  */
 
@@ -64,111 +59,6 @@ audio{
   height: 20%;
   cursor: pointer;
 }
-.Main-PopUp-connect{
-  position: relative;
-  float: right;
-  transform : translate(208%, 674%);
-  width: 20%;
-  height: 10%;
-  cursor: pointer;  
-}
-
-
-
-/*  close icon */
-.closeIcon{
-  position: absolute;
-  right: 0;
-  top: 0.6%;
-  cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* register-templat */
-
-.register-templat{
-  background: url('../images/fond.gif') fixed;
-  background-size: 100% 100%;
-}
-
-#register-block{
-  position: absolute;
-  width: 50%;
-  height: 80%;
-  top: 11%;
-  left: 25%;
-  z-index: 1;
-  border-radius: 15px;
-  background: url('../images/old-paper-scroll.png');
-  background-size: 100% 100%;
-  text-align: center;
-}
-#register-form{
-  position: relative;
-  font-size: 10px;
-}
-
-.register-signup{
-  margin-top: -5px;
-}
-
-.form_col {
-    display: inline-block;
-    margin-right: 10px;
-    width: 100px;
-    outline: none;
-}
-
-
-/* cpnnexion-templat */
-
-.connexion-templat{
-  background: url('../images/fond.gif') fixed;
-  background-size: 100% 100%;
-}
-
-#connexion-block{
-  position: absolute;
-  width: 50%;
-  height: 80%;
-  top: 11%;
-  left: 25%;
-  z-index: 1;
-  border-radius: 15px;
-  background: url('../images/old-paper-scroll.png');
-  background-size: 100% 100%;
-  text-align: center;
-}
-#connexion-form{
-  position: relative;
-  top: 20%;
-  font-size: 15px;
-}
-
-.connexion-signIn{
-  margin-top: -5px;
-}
-/*  */
-
-
-
-
-
 
 
 

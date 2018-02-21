@@ -169,12 +169,7 @@ $(document).ready( function()
 
 	function addItem(event){   /* name of the function */
 		var newToDoText = $('#task_to-do').val();   /*  grabing the value of what we write in the boxe text  and store it in a variable*/
-		$('#general-task').append('<div class="ListItem"> '+
-			'<span class="glyphicon glyphicon-calendar calendarItem" ></span>' +
-			'<span class="ToDoText">' + newToDoText + '</span><input type="text" class="editText"> '+
-			'<button class="btn btn-success saveItem">save</button> '+
-			'<button class="btn btn-fail cancelItem">cancel</button>'+
-			'</div>');     /* add what we already grab in the first funtion to the general boxe + specifying that it's a checkboxe and add an trash icone from the site of bootstrap &&   wwe link all of this to completItem class and deleteItem class */             
+		$('#general-task').append('<div class="ListItem"><span class="glyphicon glyphicon-calendar calendarItem" ></span><span class="ToDoText">' + newToDoText + '</span><input type="text" class="editText"><button class="btn btn-success saveItem">save</button><button class="btn btn-fail cancelItem">cancel</button></div>');     /* add what we already grab in the first funtion to the general boxe + specifying that it's a checkboxe and add an trash icone from the site of bootstrap &&   wwe link all of this to completItem class and deleteItem class */             
 		$('#task_to-do').val(""); /* clear the boxe task to do to make another task  */
 	}
 
@@ -309,6 +304,11 @@ $(document).ready( function()
 
 
 });
+
+
+
+
+
 
 
 

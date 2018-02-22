@@ -17,28 +17,52 @@ body{
 
 
 
-	/*  delimited box for our templat */
-#Grow_playground{
+	/*  delimited box for our template */
+.growPlayground{
   box-sizing: border-box;
+  background-color: white;
   width: 1024px;
-  height: 768px;
+  height: 630px; /* 768px is too big for screen? */
   position: absolute;
   top: 50%;
   left: 50%;
   box-shadow: 5px 5px 10px rgba(28,57,6);
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  border: 1px solid black;
-  margin-top: 60px;    
+  border: 1px solid black; 
 }
 
-	/* the side-bar sizer */
-#sideBar{
-  width: 25%;
-  height: 100%;
-  float: left;
-  background-color: white;
+/* CONSOLE FUNCTIONS (MIGRATE TO CONSOLE.VUE) */
+
+.consoleContainer {
+  height: 150px;
+  width: 768px;
+  background-color: darkgrey;
+  border: 1px solid green;
+  position: absolute;
+  left: 255px;
+  bottom: 0px;
 }
+
+
+/* Button */
+.consoleButton {
+ box-sizing: border-box;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background-color: lightgray;
+  border-radius: 25px;
+  text-align: center;
+  line-height: 30px;
+  font-size: 8px;
+  cursor: pointer;
+}
+/* END OF CONSOLE FUNCTIONS */
+
+
+
 
 /*  set the different boxes  */
 
@@ -728,5 +752,180 @@ div .cancelItem{
   color: red;
 }
 
+
+
+
+
+
+/* vero partie */
+
+
+h1{
+  color: #00FFFF;
+  text-align: center;
+  font-family: phosphate;
+  text-shadow: #000000 5px 5px, #000000 7px 1px, #000000 -1px -1px, #000000 1px -1px;
+  font-size: 240%;
+
+}
+
+.nav{
+  width: :40%;
+  background-color: white;
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+
+
+}
+  
+a{
+  font-family: phosphate;
+  border:2px double black; /* pour les bordures du menu */
+}
+
+.addmenu a{
+
+  
+  /*text-shadow: black 3px 2px, white 2px 1px, #000000 -1px -1px, #000000 1px -1px;*/
+
+
+}
+body
+{
+background-color: #FFE4C4;
+width: 700px; 
+margin:auto;
+
+}
+
+
+
+nav > ul::after{
+  content: "";
+  display: block;
+  clear:both;
+} 
+
+
+
+
+nav > ul
+{
+  margin:0px;
+  padding: 0px;
+}
+
+
+
+nav >ul > li
+{
+  float:left;
+  position: relative;
+}
+
+
+nav > ul > li > a {
+  padding: 20px 30px;
+  color:#FFF;
+}
+
+nav > ul >li:hover a {
+  padding: 15px 30px 20px 30px;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+
+
+.addmenu{
+  display: none;
+
+
+}
+
+nav a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+nav li:hover .addmenu{
+  display: inline-block;
+  position: absolute;;
+  top: 100%;
+  left: 0px;
+  padding: 0px;
+  z-index: 1000;
+}
+
+
+.addmenu li a{
+  padding: 5px 10px;
+  font-size: 13px;
+  width: 60px;
+  color: black;
+}
+
+.menu-add::hover{
+ border-top: 5px solid #FFF;
+ background-color: white;
+ 
+}
+
+.menu-add .addmenu{
+  background-color: white;
+  border:1px solid black;
+}
+
+.Skillbox
+{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0;
+    text-align: right; 
+}
+
+
+
+.Skillbox p
+{
+  color: ;
+  margin: 0 0 10px;
+  padding: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: phosphate;
+}
+
+.Skillbox p:nth-child(2){
+  float: right;
+  position: relative;
+  top: -30px;
+}
+
+.skill_progress1 
+{
+  background: white;
+  padding: 4px;
+  box-sizing: border-box;
+  border:1px solid black;
+  border-radius: 2px;
+}
+
+.skill_progress1 p{
+  color: red;
+  margin: 0px ;
+}
+
+.barrecolor1 /* jauge */
+{
+ background: red;
+ width: 1%;
+ height:30px;
+}
 
 

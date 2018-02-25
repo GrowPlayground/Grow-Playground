@@ -17,52 +17,28 @@ body{
 
 
 
-	/*  delimited box for our template */
-.growPlayground{
+	/*  delimited box for our templat */
+#Grow_playground{
   box-sizing: border-box;
-  background-color: white;
   width: 1024px;
-  height: 630px; /* 768px is too big for screen? */
+  height: 768px;
   position: absolute;
   top: 50%;
   left: 50%;
   box-shadow: 5px 5px 10px rgba(28,57,6);
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  border: 1px solid black; 
+  border: 1px solid black;
+  margin-top: 60px;    
 }
 
-/* CONSOLE FUNCTIONS (MIGRATE TO CONSOLE.VUE) */
-
-.consoleContainer {
-  height: 150px;
-  width: 768px;
-  background-color: darkgrey;
-  border: 1px solid green;
-  position: absolute;
-  left: 255px;
-  bottom: 0px;
+	/* the side-bar sizer */
+#sideBar{
+  width: 25%;
+  height: 100%;
+  float: left;
+  background-color: white;
 }
-
-
-/* Button */
-.consoleButton {
- box-sizing: border-box;
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  margin: 5px;
-  background-color: lightgray;
-  border-radius: 25px;
-  text-align: center;
-  line-height: 30px;
-  font-size: 8px;
-  cursor: pointer;
-}
-/* END OF CONSOLE FUNCTIONS */
-
-
-
 
 /*  set the different boxes  */
 
@@ -752,29 +728,23 @@ div .cancelItem{
   color: red;
 }
 
-
-
-
-
-
-/* vero-part */
-
+/* vero partie */
 
 h1{
   color: #00FFFF;
   text-align: center;
   font-family: phosphate;
   text-shadow: #000000 5px 5px, #000000 7px 1px, #000000 -1px -1px, #000000 1px -1px;
-  font-size: 240%;
+  font-size: 220%;
 
 }
 
-.nav{
+.Menu nav{
   width: :40%;
   background-color: white;
   position: absolute;
-  top: 60%;
-  left: 60%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%,-50%);
   padding: 20px;
 
@@ -803,7 +773,7 @@ margin:auto;
 
 
 
-nav > ul::after{
+.Menu ul::after{
   content: "";
   display: block;
   clear:both;
@@ -812,7 +782,7 @@ nav > ul::after{
 
 
 
-nav > ul
+.Menu nav > ul
 {
   margin:0px;
   padding: 0px;
@@ -820,23 +790,23 @@ nav > ul
 
 
 
-nav >ul > li
+.Menu ul > li
 {
   float:left;
   position: relative;
 }
 
 
-nav > ul > li > a {
+.Menu ul > li > a {
   padding: 20px 30px;
   color:#FFF;
 }
 
-nav > ul >li:hover a {
+.Menu ul >li:hover a {
   padding: 15px 30px 20px 30px;
 }
 
-nav li {
+.Menu li {
   list-style-type: none;
 }
 
@@ -848,12 +818,12 @@ nav li {
 
 }
 
-nav a {
+.Menu a {
   display: inline-block;
   text-decoration: none;
 }
 
-nav li:hover .addmenu{
+.Menu li:hover .addmenu{
   display: inline-block;
   position: absolute;;
   top: 100%;
@@ -877,7 +847,7 @@ nav li:hover .addmenu{
 }
 
 .menu-add .addmenu{
-  background-color: white;
+  background-color: pink;
   border:1px solid black;
 }
 
@@ -927,5 +897,6 @@ nav li:hover .addmenu{
  width: 1%;
  height:30px;
 }
+
 
 

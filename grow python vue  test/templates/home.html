@@ -1,0 +1,170 @@
+<!--
+	  Grow-PlayGround Main page  
+		using : Html / Css / Javascript ( Javascript / jQuery or Vue.js if you can )  => for the front End 
+		using : Python / MongoDB / php if you need it  => for the Back End 
+
+
+ -->
+
+
+ <!doctype html>
+<html lang="en-EN">
+	<head>
+		<meta charset="UTF-8" >	
+		<!-- we set this for our first page : the main page : not the page where we have our boxes !! -->
+		<link rel="stylesheet" type="text/css" href="../static/css/Grow-PlayGround-style.css">  
+		<link rel="stylesheet" type="text/css" href="../static/css/canvas.css">  
+		<!-- this is for the small icon in the onglet :) -->
+		<link rel="shortcut icon" type="image/X-icon" href="../static/images/icon.png">
+		<!-- seting the option : Compatibilities-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale = 1.0, width=device-width">	
+
+  	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  	<!-- If you want to use jquery and bootstrap -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+	<!--  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
+
+	<!--  if you want to use vue.js  -->
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+		<!-- the same as : -->
+		<script src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+
+
+
+
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+
+
+   		<title>Grow Project</title>
+  	</head>
+
+   	<body>
+
+
+				<!-- Audio Play  -->			
+	 <!--   <audio src="../static/multimedia/audio/audio-test.mp3" preload controls loop ></audio>	-->
+
+	    			<!-- End Audio -->
+	    			<header>
+	    				<div class="hold_logo">
+		    				<div id="logo">
+		    					<a href="{{ url_for('index') }}"><img src="../static/images_perso/logo2.png"></a>
+		    				</div>
+	    				</div>
+
+	    				<div id="top-nav">
+		    				<div id="login-logout">
+		    					<span><img class="ico" src="../static/images_perso/hi.gif"></span>
+		    					<span class="login"><strong>Login</strong></span>
+		    					<span> / </span>
+		    					<span class="signup"><strong> SignUp </strong></span>
+		    				</div>			    			
+		    			</div>
+	    				
+	    				<div id="nav-menu">
+	    					<span class="home"><strong> Home </strong></span>
+	    					<span class="blog"><strong> Blog </strong></span>
+	    					<span class="download"><strong> Download </strong>
+	    						<span class="coming-soon"> coming soon !! </span>
+	    					</span>
+	    					<span class="faq"><strong> FAQ </strong></span>
+	    					<span class="privacy"><strong> Privacy </strong></span>
+	    				</div>
+
+	    			</header>
+
+
+
+					<!-- Pop Up main page -->
+
+
+							<div id="Main-PopUp">
+									<div id="Main-PopUp-bg" class="close"></div>
+										<div id="Main-PopUp-main">
+
+											<img src="../static/images/closeIcon.png" class="closeIcon close"/>
+											<img src="../static/images/Main-PopUp1.png" class="Main-PopUp-img" >
+											<!-- <a href="{{ url_for('register') }}"><img src="../static/images/joinUs.png" class="Main-PopUp-joinUs"></a> -->
+												<a href="{{ url_for('connect') }}"><img src="../static/images/connect.png" class="Main-PopUp-connect"></a>
+										</div>
+							</div>
+	
+					<!-- End Pop Main Page  -->
+
+					<!-- login pop up page -->
+
+
+							<div id="login-PopUp">
+									<div id="login-PopUp-bg" class="close"></div>
+										<div id="login-PopUp-main">
+											<img src="../static/images/closeIcon.png" class="closeIcon close"/>
+											<img src="../static/images_perso/login-ico.gif" class="logo-login-ico">
+											<img src="../static/images_perso/login.png" class="logo-login">
+
+											<form method=POST action="{{ url_for('login') }}" style="text-align:center; padding-top:10%;">
+												<label for="username">Username</label>
+                    							<input type="text" class="control-user" name="username" placeholder="Username" style="margin-left:10px;">
+                    								<br>
+							                    <label for="pass">Password </label>
+							                    <input type="password" class="control-pass" name="pass" placeholder="Password" style="margin-left:13px;">
+							                    	<br>
+                								<button type="submit" class="btn-submit" style="margin-top:20px;">Log In</button>
+											</form>
+
+										</div>
+							</div>
+	
+					<!-- End login pop up main page  -->
+
+
+					<!-- Sign Up pop up page -->
+
+
+							<div id="signUp-PopUp">
+									<div id="signUp-PopUp-bg" class="close"></div>
+										<div id="signUp-PopUp-main">
+											<img src="../static/images/closeIcon.png" class="closeIcon close"/>
+											<img src="../static/images_perso/signup-ico.gif" class="logo-login-ico">
+											<img src="../static/images_perso/signUp.png" class="logo-login">
+
+											<form method=POST action="{{ url_for('register') }}" style="text-align:center; padding-top:5%;">
+								             	 <label for="username">Username</label>
+                    							<input type="text" class="control-user" name="username" placeholder="Username" style="margin-left:10px;">
+                    								<br>
+                    							<label for="username">E-mail</label>
+                    							<input type="text" class="control-user" name="Email" placeholder="E-mail" style="margin-left:35px;">
+                    								<br>
+							                    <label for="pass">Password </label>
+							                    <input type="password" class="control-pass" name="pass" placeholder="Password" style="margin-left:13px;">
+							                    	<br>
+								                <button type="submit" class="btn-register" style="margin-top:20px;">Register</button>
+								            </form>
+
+
+										</div>
+							</div>
+	
+					<!-- end Sign Up  -->
+
+				
+
+					<!-- your javascript file : -->
+						<script type="text/javascript" src="../static/js/Grow-PlayGround-main.js"></script>
+
+
+	</body>
+</html>
+

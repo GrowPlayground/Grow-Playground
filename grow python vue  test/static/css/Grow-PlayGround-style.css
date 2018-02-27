@@ -1,0 +1,353 @@
+body{
+  background: url('../images_perso/fond2.jpg') fixed;
+  background-size: 100% 100%;  
+}
+
+
+
+  /* audio box */
+audio{
+  position: absolute;
+  z-index: 1;
+  border-radius: 25px;
+  width: 80px;
+  height: 25px;
+  top: 0;
+}
+
+
+
+/*  *******************************  home page  ******************** */
+
+header{
+  position: absolute;
+  width: 100%;
+  height: 20%;
+}
+
+/*    *****************  LOGO  **************** */
+
+.hold_logo{
+  position: absolute;
+  width: 8%;
+  height: 85px;
+  transform: translate(60%,10%);
+  background: url('../images_perso/fond4.jpg');
+  background-size: 100% 100%;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 1px 0 rgba(16,62,179,0.8);
+  cursor: pointer; 
+  z-index: 1;
+}
+
+#logo{
+  position: relative;
+  padding-top: 0%;
+}
+
+.hold_logo:hover{
+  transform: translate(60%,18%);
+  transition : transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+
+
+/*  ******** TOP nav     ********* */
+
+#top-nav{
+  position: relative;
+  background: rgba(255,255,255,1);
+  width: 100%;
+  height: 22%;
+}
+
+#login-logout{
+  margin-top: 5px;
+  margin-right: 7%;
+  float: right;
+  transition: color 0.3s ease;
+  color : rgba(166,166,166,1);
+  font-size: 12px;  
+}
+
+.login, .signup{
+  cursor: pointer;
+}
+.ico{
+  width: 22px;
+  height: 22px;
+}
+
+#login-logout:hover{
+  color : rgba(40,180,165,1);
+  font-size: 12px;
+}
+
+
+/* *****************  nav-menu  *********************   */
+
+#nav-menu{
+  position: relative;
+  padding-top: 1%;
+  width: 100%;
+  height: 5%;
+  border: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8%;
+}
+
+
+.home{
+  width: 5%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 3px;
+  font-style: italic;
+  font-size: 25px;
+  transition: color 0.3s ease;
+  color: white;
+}
+.home:hover{
+  color: rgba(89,14,76,0.9);
+}
+
+.blog{
+  width: 7%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;  
+  padding-top: 3px;
+  font-style: italic;
+  font-size: 25px;
+  transition: color 0.3s ease;
+  color: white;
+}
+.blog:hover{
+  color: rgba(30,179,86,0.9);
+}
+
+.download{
+  width: 9%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;  
+  padding-top: 3px;
+  font-style: italic;
+  font-size: 25px;
+  transition: color 0.3s ease;
+  color: white;
+}
+.coming-soon{
+  position: relative;
+  top: -20px;
+  font-size: 10px;
+}
+.download:hover{
+  color: rgba(40,85,198,0.9);
+}
+
+.faq{
+  width: 7%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 3px;
+  font-style: italic;
+  font-size: 25px;
+  transition: color 0.3s ease;
+  color: white;
+}
+.faq:hover{
+  color: rgba(253,0,0,0.8);
+}
+
+.privacy{
+  width: 0%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;  
+  padding-top: 3px;
+  font-style: italic;
+  font-size: 25px;
+  transition: color 0.3s ease;
+  color: white;
+}
+.privacy:hover{
+  color: rgba(10,103,10,0.9);
+}
+
+
+
+
+
+/**************************   POP UP ENTRY PAGE  ****************************/
+
+#Main-PopUp{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0;
+}
+
+#Main-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#Main-PopUp-main{
+  position: relative;
+  width: 60%;
+  height: 50%;
+  top: 25%;
+  margin : auto; 
+  background: url('../images/fond-event.jpg'); 
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(18,70,15,0.6);
+}
+.Main-PopUp-img{
+  position: relative;
+  float: right;
+  top: 10%;
+  width: 50%;
+  height: 50%;
+  z-index: 1;
+}
+.Main-PopUp-joinUs{
+  position: relative;
+  transform : translate(360%, 250%);
+  width: 20%;
+  height: 20%;
+  cursor: pointer;
+}
+.Main-PopUp-connect{
+  position: relative;
+  float: right;
+  transform : translate(248%, 860%);
+  width: 20%;
+  height: 10%;
+  cursor: pointer;  
+}
+
+
+
+/*  close icon */
+.closeIcon{
+  position: absolute;
+  right: 0;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+
+
+
+/* ------------------------------  sign Up / Sign In pages ------------------------------- */ 
+
+
+
+/**********************   login pop  ****************************/
+
+#login-PopUp{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0;
+  display: none;
+}
+
+#login-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#login-PopUp-main{
+  position: relative;
+  width: 30%;
+  height: 60%;
+  top: 25%;
+  margin : auto; 
+  background: white;
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(18,70,15,0.6);
+  display: none;
+}
+
+/*  close icon */
+.closeIcon{
+  position: absolute;
+  right: 0;
+  top: 0.6%;
+  cursor: pointer;
+}
+
+.logo-login{
+  position: relative;
+  padding:5% 27%;
+}
+
+.logo-login-ico{
+  position: relative;
+  transform : translate(-10% -10%);
+}
+
+/**********************   signUp pop  ****************************/
+
+#signUp-PopUp{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  top: 0;
+  margin-left: 0;
+  display: none;
+}
+
+#signUp-PopUp-bg{
+  background : rgba(0,0,0,0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  top: 0;
+}
+
+#signUp-PopUp-main{
+  position: relative;
+  width: 30%;
+  height: 60%;
+  top: 25%;
+  margin : auto; 
+  background: white;
+  background-size: 100% 100%;
+  border-radius: 15px;
+  z-index: 1; 
+  box-shadow: 5px 5px 5px rgba(18,70,15,0.6);
+  display: none;
+}
+
+/*  close icon */
+.closeIcon{
+  position: absolute;
+  right: 0;
+  top: 0.6%;
+  cursor: pointer;
+}

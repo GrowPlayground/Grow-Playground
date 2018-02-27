@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %} 
+<div class="container">
+    <div> <img style="
+          position: absolute;
+          z-index: -1;
+          top: 24%;
+          left: 54%;"
+          class="img-login" 
+          src="../static/images/img_login.jpg"> 
+    </div>
+
+
+            <form method=POST action="{{ url_for('register') }}" style="text-align:center; padding-top:5%; font-size:20px;">
+                 <label for="username">Username</label>
+                <input type="text" class="control-user" name="username" placeholder="Username" style="margin-left:10px;">
+                <span class="spam" style="position:absolute; transform:translate(-105%, 170%); font-size:12px; color:red;"> 5 caractere at least :) </span>
+                    <br>  <br>
+                <label for="Email">E-mail</label>
+                <input type="text" class="control-email" name="Email" placeholder="E-mail" style="margin-left:32px;">
+                <span class="spam" style="position:absolute; transform:translate(-105%, 170%); font-size:12px; color:red;"> invalid form E-mail </span>
+                    <br>  <br>
+                <label for="pass">Password </label>
+                <input type="password" class="control-pass" name="pass" placeholder="Password" style="margin-left:13px;">
+                <span class="spam" style="position:absolute; transform:translate(-105%, 170%); font-size:12px; color:red;"> 8 caractere at least ;) </span>
+                    <br>  <br>
+                <button type="submit" class="btn-register" style="margin-top:20px; margin-left:5%;  font-size:20px;">Register</button>
+                <img src="../static/images/brillant.gif" style="position:absolute; padding-top:10px; height: 40px;">
+            </form>
+            <br>
+        
+   
+</div>
+{% endblock %}

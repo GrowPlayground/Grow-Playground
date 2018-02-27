@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+     <div class="img-login"> <img style="
+          position: absolute;
+          z-index: -1;
+          top: 24%;
+          left: 54%;"
+          class="img-login" 
+          src="../static/images/img_login.jpg">
+      </div>
+
+           <form method=POST action="{{ url_for('login') }}" style="text-align:center; padding-top:10%; font-size:20px;">
+                <label for="username">Username</label>
+                <input type="text" class="control-user" name="username" placeholder="Username" style="margin-left:10px;">
+                    <br>  <br>
+                <label for="pass">Password </label>
+                <input type="password" class="control-pass" name="pass" placeholder="Password" style="margin-left:13px;">
+                    <br> 
+                    <div style="font-size:12px; left: 46%; padding-left:5%;">
+                        Don't have an account? <a href="{{ url_for('register') }}">Sign up here</a>.
+                    </div>
+                <button type="submit" class="btn-submit" style="margin-top:20px; margin-left:5%; font-size:20px;">Log In</button>
+                <img src="../static/images/cheer.gif" style="position:absolute; padding-top:10px; height: 40px;">
+
+            </form>
+            <br>
+      
+</div>
+{% endblock %}

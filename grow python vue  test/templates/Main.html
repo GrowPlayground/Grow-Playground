@@ -1,0 +1,236 @@
+
+<!doctype html>
+<html lang="en-EN">
+	<head>
+		<meta charset="UTF-8" >	
+		<!-- we set this for our page of the different boxes !! -->
+		<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/canvas.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/calendar.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/sideBar.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/console.css">
+		<!-- this is for the small icon in the onglet :) -->
+		<link rel="shortcut icon" type="image/X-icon" href="../static/images/icon.png">
+		<!-- seting the option : Compatibilities-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="initial-scale = 1.0, width=device-width">	
+
+  	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  	<!-- If you want to use jquery and bootstrap -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+	<!--  		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  -->
+
+	    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.0/jquery.js"></script>
+
+
+	    <!--  script calendar -->
+		<!-- <script type="text/javascript" src="../static/js/main.js"></script> -->
+		<script type="text/javascript" src="../static/js/calendar.js"></script>
+
+	<!--  if you want to use vue.js  -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script type="text/javascript" src="../static/js/avatar.js"></script>
+
+
+
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+
+
+
+
+   		<title> Main Page</title>
+
+	</head>
+
+	<body>
+		<a class="logout" href="{{ url_for('logout') }}"><img src="../static/images/logout.png"></a>
+
+				<div class="demo-2">
+					<div class="content">
+		                <div id="large-header" class="large-header">
+		                    <canvas id="demo-canvas"></canvas>
+		                </div>
+		            </div>         
+				</div>
+
+				
+		        <script src="../static/js/canvas.js"></script>
+
+				<div id="Grow_playground">
+
+		        <img src="../static/images/link-boxes2.png" class="link-boxes">
+		        <img src="../static/images/link-boxes3.png" class="link-boxes1">
+					<!-- SideBar Box -->
+					<div id="sideBar">
+
+							<div class="avatarContainerPosition">
+						      <div class="avatarContainer">
+						        <div class="healthContainer">
+						        </div>
+						        <div class="avatarImageContainer">
+						        </div>
+						      </div>
+						    </div>
+						    <div class="experienceContainer">
+						      <div class="levelContainer">
+						        <span class="level"></span>
+						      </div>
+						      <div class="experienceBar experienceBarOne">
+						        <span class="experienceSpanOne"></span>
+						      </div>
+						    </div>
+
+						    <div class="vaultContainer">
+						      <div class="goldContainer">
+						      </div>
+						      <div class="marketContainer">
+						        <div class="buyApproval">
+						          <span class="buyButtonYes"> Yes </span>
+						          <span class="buyButtonNo"> No </span>
+						        </div>
+						        <div class="marketImageContainer">
+						        </div>
+						      </div>
+						    </div>
+
+					</div>
+					<!-- End SideBar-->
+
+					<!-- Container of the different boxes-->
+					<div id="container">
+
+						<!-- Habits Box -->
+						<div id="habits">
+
+							<p> Pedro's part</p>
+
+						</div>
+						<!-- End Habits Box -->
+
+
+						<!-- Skills Box  -->
+						<div id="skills">
+
+							<nav class="Menu">
+								<ul>
+
+									<li class="menu-stats"><a href="Stats.html">Stats</a></li>
+									<li class="menu-recommended"><a href="Recommended.html">Recommended</a></li>
+									<li class="menu-add"><a href="add.html"><i class="fa fa-plus" aria-hidden="true"></i></a> <!-- ajout de la croix avec <i> -->
+										<ul class="addmenu"> <!-- ajout du sous-menu add list -->
+											<li><a href="#">Add List</a></li>
+										</ul>
+									 </li>
+								</ul>
+							</nav>
+
+								<div class="progressBar1">
+									<div class="Skillbox">
+										<div class="skill_progress1" >
+											<p>Social</p>
+										    <p></p>
+
+											<div class="barrecolor1"></div>
+										</div>
+									</div>
+
+							<!--a voir plus tard .... -->
+
+									<div class="Skillbox">
+										<p>Health</p>
+										<p></p><!-- en fonction de la progression de l'utilisateur  -->
+										<div class="skill_progress2"></div>
+										<div class="barrecolor2"></div>
+									</div>
+									<div class="Skillbox">
+										<p>Experience</p>
+										<p></p><!-- en fonction de la progression de l'utilisateur  -->
+										<div class="skill_progress3"></div>
+										<div class="barrecolor3"></div>
+									</div>
+									<div class="Skillbox">
+										<p>Skill</p>
+										<p></p><!-- en fonction de la progression de l'utilisateur  -->
+										<div class="skill_progress4"></div>
+										<div class="barrecolor4"></div>
+									</div>
+									<div class="Skillbox">
+										<p>Knowledge</p>
+										<p></p><!-- en fonction de la prograssion de l'utilisateur  -->
+										<div class="skill_progress5"></div>
+										<div class="barrecolor5"></div>
+									</div>
+								</div>
+							</div>
+						<!-- End Skills Box -->
+
+
+						<!--  ToDos Box  -->
+						<ToDos id="ToDos">
+
+							<header-todos class="header-list">
+								ToDo-List
+							</header-todos>
+							<general-task id="general-task">
+								<header>
+									<div id="input-task">
+											<input class="addToDo-input" v-model="newtask" @keyUp.13="addTask" type="text" placeholder=" what are you planing for ?  *-* " size="40" title=" Add To Do " autofocus autocomplete="off">
+									</div>
+								</header>
+								<section>	
+									<ul class="todo-list">
+										<li v-for=" task in tasks" class="todo-task">
+											<div class="todo-task-element">
+												<input class="toggle" type="checkbox">
+												<label @dblclick="editTodo(task)" class="todo-task-li">{{ task }}</label>
+												<label class="delete" @click="deleteTodo(task)">x</label>
+											</div>											
+											<div class="glyphicon glyphicon-calendar calendarItem"></div>
+										</li>
+
+
+									</ul>
+								</section>
+							</general-task>
+
+						</ToDos>
+						<!-- End ToDos Box -->
+
+						<!-- Calendar Box  -->
+						<div id="Calendar">
+
+							 <script type="text/javascript">
+      							  calendrier();
+						    </script>
+
+						</div>
+						<!-- End Calendar Box -->
+					</div>
+					<!-- End of Container -->
+
+		</div>
+
+
+					<!-- your javascript file : -->
+			<!--  if you want to use vue.js  -->
+
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+		<script type="text/javascript" src="../static/vue.js/todo-vue.js"></script>
+
+		<script type="text/javascript" src="../static/js/sideBar.js"></script>
+		<script type="text/javascript" src="../static/js/console.js"></script>
+
+
+	</body>
+</html>

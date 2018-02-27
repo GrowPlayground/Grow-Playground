@@ -1,0 +1,168 @@
+/*  vero's part   */
+h1{
+  color: #00FFFF;
+  text-align: center;
+  font-family: phosphate;
+  text-shadow: #000000 5px 5px, #000000 7px 1px, #000000 -1px -1px, #000000 1px -1px;
+  font-size: 220%;
+
+}
+
+.Menu nav{
+  width: :40%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 20px;
+
+
+}
+  
+a{
+  font-family: phosphate;
+  border:2px double black; /* pour les bordures du menu */
+}
+
+.addmenu a{
+
+  
+  /*text-shadow: black 3px 2px, white 2px 1px, #000000 -1px -1px, #000000 1px -1px;*/
+
+
+}
+body
+{
+background-color: #FFE4C4;
+width: 700px; 
+margin:auto;
+
+}
+
+
+
+.Menu ul::after{
+  content: "";
+  display: block;
+  clear:both;
+} 
+
+
+
+
+.Menu nav > ul
+{
+  margin:0px;
+  padding: 0px;
+}
+
+
+
+.Menu ul > li
+{
+  float:left;
+  position: relative;
+}
+
+
+.Menu ul > li > a {
+  padding: 20px 30px;
+  color:#FFF;
+}
+
+.Menu ul >li:hover a {
+  padding: 15px 30px 20px 30px;
+}
+
+.Menu li {
+  list-style-type: none;
+}
+
+
+
+.addmenu{
+  display: none;
+
+
+}
+
+.Menu a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.Menu li:hover .addmenu{
+  display: inline-block;
+  position: absolute;;
+  top: 100%;
+  left: 0px;
+  padding: 0px;
+  z-index: 1000;
+}
+
+
+.addmenu li a{
+  padding: 5px 10px;
+  font-size: 13px;
+  width: 60px;
+  color: black;
+}
+
+.menu-add::hover{
+ border-top: 5px solid #FFF;
+ background-color: white;
+ 
+}
+
+.menu-add .addmenu{
+  background-color: pink;
+  border:1px solid black;
+}
+
+.Skillbox
+{
+  box-sizing: border-box;
+  width: 100%;
+  margin: 20px 0;
+    text-align: right; 
+}
+
+
+
+.Skillbox p
+{
+  color: ;
+  margin: 0 0 10px;
+  padding: 0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: phosphate;
+}
+
+.Skillbox p:nth-child(2){
+  float: right;
+  position: relative;
+  top: -30px;
+}
+
+.skill_progress1 
+{
+  background: white;
+  padding: 4px;
+  box-sizing: border-box;
+  border:1px solid black;
+  border-radius: 2px;
+}
+
+.skill_progress1 p{
+  color: red;
+  margin: 0px ;
+}
+
+.barrecolor1 /* jauge */
+{
+ background: red;
+ width: 1%;
+ height:30px;
+}

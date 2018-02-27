@@ -1,0 +1,9 @@
+.consoleButton {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: white;
+	border: 1px solid black;
+	color: white;
+	line-height: 40px;	
+}

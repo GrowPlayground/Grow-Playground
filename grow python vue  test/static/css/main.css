@@ -65,10 +65,11 @@ body{
 }
 
 #skills,#habits,#ToDos,#Calendar{
-  width: 50%;
-  height: 50%;
-  border: 1px solid gray;
+  width: 47%;
+  height: 49%;
   float:left;
+  margin-bottom: 13px;
+  margin-right: 20px;
   box-sizing: border-box;
   overflow: auto;
   display: inline-box;
@@ -119,12 +120,14 @@ body{
   padding-top: 5%;
   padding-right: 10%;
   font-size: 10px;
+  height: 188px;
+  overflow: auto;
 }
 
 .todo-list li{
   list-style: none;
   padding-right: 2%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
   width:100%;
   height: 50px;
   margin-right: 15px;
@@ -144,7 +147,8 @@ body{
   position: relative;
   cursor: pointer;
   float: right;
-  font-size: 14px;
+  font-size: 10px;
+  padding-top: 10px;
   color: red;
 }
 
@@ -171,162 +175,174 @@ body{
   transform:translate(182%,1410%);
   z-index: -1;
 }
+.link-boxes2{
 
-/*  ---------------------------------------------------   */
-/*  enter from bottom */
-
-@-webkit-keyframes enterFromBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
+  position: absolute;
+  transform:translate(515%,14%);
+  z-index: -1;
 }
- 
-@keyframes enterFromBottom {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(-50%, -45%);
-            transform: translate(-50%, -45%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
+.link-boxes3{
+
+  position: absolute;
+  transform:translate(515%,1630%);
+  z-index: -1;
 }
 
+/*  General Todos  All  */
 
-/* enter from left */
-
-#skills{
-
-  -webkit-animation: enterFromleft .7s 1s ease-out both;
-          animation: enterFromleft .7s 1s ease-out both;
+#all-Todos{
+  position: absolute;
+  height: 400px;
+  width: 270px;
+  background: url('../images/border2.png');
+  background-size: 100% 100%;
+  background-color: #eeeeee;
+  transform:translate(-60%,57%);
+  border-radius: 10px;
+  box-shadow: -3px 3px 6px #eeeeee;
+  z-index: 1000;
+}
+.all-Todos-title{
+  padding-top: 68px;
+  font-size: 12px;
+  text-align: center;
+  color: #590050;
 }
 
-@keyframes enterFromleft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(5%, 0%);
-            transform: translate(5%, 0%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
+.img-all{
+  position: relative;
+  transform:translate(-55%,-35%);
+  cursor: pointer;
+  float: right;
 }
-
-/*  enter from right  */
-
-#habits{
-
-  -webkit-animation: enterFromtop .7s 2s ease-out both;
-          animation: enterFromtop .7s 2s ease-out both;
-}
-
-@keyframes enterFromtop {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(0%, -10%);
-            transform: translate(0%, -10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
-/*  enter from down  */
-
-#ToDos{
-
-  -webkit-animation: enterFromdown .7s 3s ease-out both;
-          animation: enterFromdown .7s 3s ease-out both;
-}
-
-@keyframes enterFromdown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(0%, 10%);
-            transform: translate(0%, 10%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
-}
-
-#Calendar{
-
-  -webkit-animation: enterFromleft .7s 4s ease-out both;
-          animation: enterFromleft .7s 4s ease-out both;
-}
-
-@keyframes enterFromleft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(5%, 0%);
-            transform: translate(5%, 0%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
-  }
+.closeIcon{
+  position: relative;
+  float: right;
+  width: 11px;
+  cursor: pointer;
+  transform:translate(-32%,-830%);
 }
 
 
-/*  showing the chain  */
-.link-boxes{
+/*  -------------  the different field   -------------------*/
 
-  -webkit-animation: enterFromShow .7s 5s ease-out both;
-          animation: enterFromShow .7s 5s ease-out both;
-}
 
-@keyframes enterFromShow {
-  0% {
-    opacity: 0;
-    z-index: -1;
-    -webkit-transform: translate(182%, 160%);
-            transform: translate(182%, 160%);
-  }
-  100% {
-    opacity: 1;
-    z-index: -1;
-    -webkit-transform: translate(182%, 160%);
-            transform: translate(182%, 160%);
-  }
-}.link-boxes1{
-
-  -webkit-animation: enterFromShow1 .7s 5s ease-out both;
-          animation: enterFromShow1 .7s 5s ease-out both;
-}
-
-@keyframes enterFromShow1 {
-  0% {
-    opacity: 0;
-    z-index: -1;
-    -webkit-transform: translate(182%, 1410%);
-            transform: translate(182%, 1410%);
-  }
-  100% {
-    opacity: 1;
-    z-index: -1;
-    -webkit-transform: translate(182%, 1410%);
-            transform: translate(182%, 1410%);
-  }
+#Important_urgent{
+  margin-top: 20%;
 }
 
 
-/*  ---------------------------------------------------   */
+/* ----------------field title -------------------*/
+#title-IU,#title-I,#title-U,#title-NIU,#title-A{  
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: center;
+}
 
+/* ---------------------cursor hover title ------------------------ */
+#title-IU,#title-I,#title-U,#title-NIU,#title-A:hover{
+  font-size: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/*  ------------------block tasks-------------------------- */
+#important_urgent-task,#important-task,#urgent-task,#not_important-urgent-task{
+  position: relative;
+  margin-top: 5px;
+  height: 70px;
+  font-size: 12px;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  display: none;    
+}
+
+/*  make the boxe of title small */
+#Important_urgent h1, #important h1, #urgent h1, #not_important-urgent h1{
+  margin-top: 4px;
+  margin-bottom: 6px;
+  font-size: 10px;
+}
+
+
+#important_urgent-task div,#important-task div,#urgent-task div,#not_important-urgent-task div{
+  display: block;
+  background-image: url('../images/fill.png');
+  padding: 10px 0px 10px 0px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding-left: 20px;
+  margin: 0 7px;
+  box-shadow: 2px 2px 0px black;
+}
+
+
+/*  ------------------important & urgent ----------------------------- */
+#title-IU{
+  border-bottom: 1px solid red;
+}
+
+#Important_urgent h1{
+  color: red;
+}
+
+#title-IU:hover{
+  background-color: rgba(255,4,4,0.3);
+  cursor: pointer;
+}
+
+
+
+
+/*  ------------------- important --------------------------*/
+#title-I{
+  border-bottom: 1px solid brown;
+}
+
+#important h1{
+  color: brown;
+}
+
+#title-I:hover{
+  background-color: rgba(211,100,67,0.4);
+  cursor: pointer;
+}
+
+
+
+/* -----------------------urgent ------------------------- */
+#title-U{
+  border-bottom: 1px solid green;
+}
+#urgent h1{
+  color: green;
+}
+
+#title-U:hover{
+  background-color: rgba(143,237,126,0.4);
+  cursor: pointer;
+}
+
+
+
+
+
+/*  -------------------------- not important & not urgent ---------------------------- */
+#title-NIU{
+  border-bottom: 1px solid #03327f;
+}
+#not_important-urgent h1{
+  color: #03327f;
+}
+
+#title-NIU:hover{
+  background-color: rgba(69,222,239,0.4);
+  cursor: pointer;
+}
+
+/* space in the end to show the box */
+#not_important-urgent{
+  margin-bottom: 10px;
+}
 

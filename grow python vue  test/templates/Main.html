@@ -5,6 +5,7 @@
 		<meta charset="UTF-8" >	
 		<!-- we set this for our page of the different boxes !! -->
 		<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+		<link rel="stylesheet" type="text/css" href="../static/css/animation.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/canvas.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/calendar.css">
 		<link rel="stylesheet" type="text/css" href="../static/css/sideBar.css">
@@ -71,6 +72,8 @@
 
 		        <img src="../static/images/link-boxes2.png" class="link-boxes">
 		        <img src="../static/images/link-boxes3.png" class="link-boxes1">
+		        <img src="../static/images/link-boxes4.png" class="link-boxes2">
+		        <img src="../static/images/link-boxes5.png" class="link-boxes3">
 					<!-- SideBar Box -->
 					<div id="sideBar">
 
@@ -180,8 +183,8 @@
 						<ToDos id="ToDos">
 
 							<header-todos class="header-list">
-								ToDo-List
 							</header-todos>
+							
 							<general-task id="general-task">
 								<header>
 									<div id="input-task">
@@ -193,19 +196,72 @@
 										<li v-for=" task in tasks" class="todo-task">
 											<div class="todo-task-element">
 												<input class="toggle" type="checkbox">
-												<label @dblclick="editTodo(task)" class="todo-task-li">{{ task }}</label>
-												<label class="delete" @click="deleteTodo(task)">x</label>
+												<label @dblclick="editTodo(task)" class="todo-task-li" v-text="task.title"></label>
+												<label class="glyphicon glyphicon-trash delete" @click="deleteTodo(task)"></label>
 											</div>											
-											<div class="glyphicon glyphicon-calendar calendarItem"></div>
+											<div class="glyphicon glyphicon-calendar calendarItem" title="Click on the calendar to select a deadline -->"></div>
 										</li>
-
-
 									</ul>
 								</section>
+								<footer>
+									<img class="img-all" src="../static/images/all.png" @click="showAllTodos=true" title="show all tasks">
+								</footer>
 							</general-task>
 
 						</ToDos>
+
+							<!-- General ToDos-->
+
+  						<transition name="fade">
+							<all-Todos id="all-Todos" v-if="showAllTodos">
+
+								<p class="all-Todos-title"><strong>All The Way There Is To Do</strong></p>
+								<img src="../static/images/closeIcon.png" class="closeIcon" @click="showAllTodos=false">
+
+								<div id="Important_urgent"> 				<!--  block important and urgent -->
+									<div id="title-IU">
+										<h1> Important &amp Urgent (10%)</h1>
+									</div>
+									<div id="important_urgent-task">
+
+									</div>
+								</div>
+
+								<div id="important">					<!--  block important -->
+									<div id="title-I">
+										<h1> Important (90%)</h1>
+									</div>
+									<div id="important-task">
+
+									</div>
+
+								</div>
+
+								<div id="urgent">						<!-- block urgent -->
+									<div id="title-U">
+										<h1> Urgent </h1>
+									</div>
+									<div id="urgent-task">
+
+									</div>
+								</div>
+
+								<div id="not_important-urgent">			<!--  block not important and not urgent -->
+									<div id="title-NIU">
+										<h1> Not Important &amp Urgent </h1>
+									</div>
+									<div id="not_important-urgent-task">
+
+									</div>
+								</div>
+
+							</all-Todos>
+						</transition>
+
+							<!-- END general ToDos -->
+
 						<!-- End ToDos Box -->
+
 
 						<!-- Calendar Box  -->
 						<div id="Calendar">
@@ -218,6 +274,9 @@
 						<!-- End Calendar Box -->
 					</div>
 					<!-- End of Container -->
+
+
+
 
 		</div>
 

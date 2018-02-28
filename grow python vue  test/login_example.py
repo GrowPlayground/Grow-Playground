@@ -1,6 +1,5 @@
 from flask import Flask, render_template, url_for, request, session, redirect
 from flask_pymongo import PyMongo
-from wtforms import Form, validators, StringField
 import bcrypt
 
 app = Flask(__name__)
@@ -27,7 +26,6 @@ def login():
     users = mongo.db.users
     login_user = users.find_one({'name' : request.form['username']})
     
-
     if login_user:
         if hash(request.form['pass']) == login_user['password']:
             session['username'] = request.form['username']
@@ -63,6 +61,6 @@ def logout():
 
 
 if __name__ == '__main__':
-    app.secret_key = '2d9-E2.)f&é,A$p@fpa+zSU03êû9_'
-    app.run(host='0.0.0.0', port=8080)
+    app.secret_key = 'mysecret'
+    app.run(debug=True)
 

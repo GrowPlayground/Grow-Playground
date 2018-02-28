@@ -10,15 +10,21 @@ Vue.component('header-todos',{
 
 
 Vue.component('general-task', {
-
-    template: '<div> <slot></slot> </div>'
-
+    template: '<div> <slot></slot>  </div>'
 });
+
+
+Vue.component('all-Todos',{
+    template: '<div> <slot> </slot> </div>'
+});
+
 
 var app = new Vue ({
 
-	el: '#ToDos',
+	el: '#container',
 	data: {
+	    showAllTodos:false,
+
 		newtask: '',
 		editedTodo: null,
 	    visibility: 'all',
@@ -31,10 +37,17 @@ var app = new Vue ({
 
 			if(!value) { return }
 
-			this.tasks.push(value);
+			this.tasks.push({
+				title:value,
+				completed:false
+			});
 			this.newtask='';		
+		},
+
+		deleteTodo(task){
+			this.tasks.splice(this.tasks.indexOf(task),1)
 		}
+
 	},
 });
-
 

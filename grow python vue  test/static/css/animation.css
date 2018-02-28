@@ -1,0 +1,211 @@
+
+
+/*  ---------------------------------------------------   */
+/*  enter from bottom */
+
+@-webkit-keyframes enterFromBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+ 
+@keyframes enterFromBottom {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-50%, -45%);
+            transform: translate(-50%, -45%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+
+/* enter from left */
+
+#skills{
+
+  -webkit-animation: enterFromleft .7s 1s ease-out both;
+          animation: enterFromleft .7s 1s ease-out both;
+}
+
+@keyframes enterFromleft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(5%, 0%);
+            transform: translate(5%, 0%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+/*  enter from right  */
+
+#habits{
+
+  -webkit-animation: enterFromtop .7s 2s ease-out both;
+          animation: enterFromtop .7s 2s ease-out both;
+}
+
+@keyframes enterFromtop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0%, -10%);
+            transform: translate(0%, -10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+/*  enter from down  */
+
+#ToDos{
+
+  -webkit-animation: enterFromdown .7s 3s ease-out both;
+          animation: enterFromdown .7s 3s ease-out both;
+}
+
+@keyframes enterFromdown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0%, 10%);
+            transform: translate(0%, 10%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+#Calendar{
+
+  -webkit-animation: enterFromleft .7s 4s ease-out both;
+          animation: enterFromleft .7s 4s ease-out both;
+}
+
+@keyframes enterFromleft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(5%, 0%);
+            transform: translate(5%, 0%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+  }
+}
+
+
+/*  showing the chain  */
+.link-boxes{
+
+  -webkit-animation: enterFromShow .7s 5s ease-out both;
+          animation: enterFromShow .7s 5s ease-out both;
+}
+
+@keyframes enterFromShow {
+  0% {
+    opacity: 0;
+    z-index: -1;
+    -webkit-transform: translate(182%, 160%);
+            transform: translate(182%, 160%);
+  }
+  100% {
+    opacity: 1;
+    z-index: -1;
+    -webkit-transform: translate(182%, 160%);
+            transform: translate(182%, 160%);
+  }
+}
+.link-boxes1{
+
+  -webkit-animation: enterFromShow1 .7s 5s ease-out both;
+          animation: enterFromShow1 .7s 5s ease-out both;
+}
+
+@keyframes enterFromShow1 {
+  0% {
+    opacity: 0;
+    z-index: -1;
+    -webkit-transform: translate(182%, 1410%);
+            transform: translate(182%, 1410%);
+  }
+  100% {
+    opacity: 1;
+    z-index: -1;
+    -webkit-transform: translate(182%, 1410%);
+            transform: translate(182%, 1410%);
+  }
+}
+.link-boxes2{
+
+  -webkit-animation: enterFromShow2 .7s 5s ease-out both;
+          animation: enterFromShow2 .7s 5s ease-out both;
+}
+
+@keyframes enterFromShow2 {
+  0% {
+    opacity: 0;
+    z-index: -1;
+    -webkit-transform: translate(515%, 14%);
+            transform: translate(515%, 14%);
+  }
+  100% {
+    opacity: 1;
+    z-index: -1;
+    -webkit-transform: translate(515%, 14%);
+            transform: translate(515%, 14%);
+  }
+}
+.link-boxes3{
+
+  -webkit-animation: enterFromShow3 .7s 5s ease-out both;
+          animation: enterFromShow3 .7s 5s ease-out both;
+}
+
+@keyframes enterFromShow3 {
+  0% {
+    opacity: 0;
+    z-index: -1;
+    -webkit-transform: translate(515%, 1630%);
+            transform: translate(515%, 1630%);
+  }
+  100% {
+    opacity: 1;
+    z-index: -1;
+    -webkit-transform: translate(515%, 1630%);
+            transform: translate(515%, 1630%);
+  }
+}
+
+
+
+
+/*  ---------------------------------------------------   */
+
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
+/*  ----------------------------------------  */

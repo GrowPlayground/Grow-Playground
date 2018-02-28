@@ -1,0 +1,37 @@
+Dailies{
+	background-color: : url('https://vignette.wikia.nocookie.net/dragonhandbook/images/6/61/Quetzalcoatl.png/revision/latest?cb=20111208202847');
+	background-size: cover;
+}
+
+#title{
+  position: relative;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-left: 50px;
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'SF';
+}
+#input-task{
+  position: relative;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-left: 50px;
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'SF';
+}
+
+
+}
+#task-main{
+  text-align: center;
+}
+
+#task_to-do{
+  background-color: rgba(238,238,238);
+  margin-bottom: 5px;
+  font-size: 13px;
+}

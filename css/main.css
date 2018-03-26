@@ -755,16 +755,17 @@ div .cancelItem{
 .cal_calendrier
 {
     border:1px solid black;
+    box-sizing: border-box;
     padding:1px;
     background-color:#4594ff;
-    width:250px;
+    width:256px;
     margin:auto;
-    height:200px;
+    height:256px;
     background-color : white;
 }
 .cal_calendrier th
 {
-    border:1px solid black;
+    border:1px solid white;
     background-color:#ffffff;
 }
 .cal_calendrier td
@@ -772,10 +773,23 @@ div .cancelItem{
     border:1px solid black;
     background-color:#ffffff;
     text-align:center;
+    border-top: 1px solid green;
+    
 }
 
-.cal_jours_av_ap
-{
-    color:#5a779e;
-}
 
+div {
+
+    position:absolute;
+    border:1px solid black;
+    background-color: lightskyblue;
+    right: 261px;
+    height:176px;
+    width: 244px;
+    top:41px;
+
+}
+#fenetre{
+    font-size: 9px;
+
+}
